@@ -1,3 +1,3 @@
-function Hi (name) {
+function Hi(name) {
   console.log('Hi', name)
 }
