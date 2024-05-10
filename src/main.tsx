@@ -8,17 +8,6 @@ import { Input } from './shared/ui/components/Input'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <p>Hi my clone!!</p>
-    <Button variant='dark' className='mybutton'>
-      Knopka
-    </Button>
-    <Button>
-      <Arrow />
-    </Button>
-    <Button variant='transparent'>
-      <Arrow />
-    </Button>
-    <Input className='dee' />
-    <Input />
+                      <p>I win big money</p>
   </React.StrictMode>,
 )
