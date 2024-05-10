@@ -8,7 +8,7 @@ import { Input } from '../shared/ui/components/Input'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <p>Hi my clone</p>
+    <p>Hi my clone!!</p>
     <Button variant='dark' className='mybutton'>
       Knopka
     </Button>
