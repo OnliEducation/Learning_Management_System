@@ -1,0 +1,29 @@
+.default {
+    padding: 10px;
+    padding-left: 40px;
+
+    border-radius: 8px;
+    border: 1px solid var(--grey-700);
+    color: #000;
+}
+
+.default::placeholder {
+    color: #334155;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.auth {
+    compose: default;
+    padding: 16px;
+
+    border: 1px solid #E2E8F0;
+}
+
+.auth::placeholder {
+    color: #94A3B8;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+}

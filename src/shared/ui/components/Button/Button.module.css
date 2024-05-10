@@ -1,0 +1,28 @@
+.default {
+    display: flex;
+    gap: 6px;
+    padding: 10px 24px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22.4px;
+    color: white;
+
+    background-color: #3B82F6;
+    border-radius: 8px;
+}
+
+.dark {
+    compose: default;
+
+    background-color: #020617;
+}
+
+.transparent {
+    compose: default;
+
+    color: #0F172A;
+
+    background-color: transparent;
+    border: 1px solid #020617;
+}
