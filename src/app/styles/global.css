@@ -8,10 +8,11 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px; /* normal ?? */
+  font-size: 16px;
+  line-height: 25.6px;
+  /* normal ?? */
   font-family: "Inter", sans-serif;
-  color: var(--grey-6);
+  color: var(--grey-700);
   box-sizing: border-box;
 
   /* оптимизация выравнивания шрифта относительно центра строки */
@@ -31,13 +32,13 @@ body {
   width: 100%;
   height: 100%;
 
-  background-color: var(--background-1);
+  background-color: var(--color-white);
 }
 
 img,
 video {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -54,23 +55,28 @@ a {
   text-decoration: none;
 }
 
+button:focus,
+button:focus-visible {
+  outline: none -webkit-focus-ring-color;
+}
+
 .visually-hidden {
-    position: absolute;
-    overflow: hidden;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
 }
 
 input,
 select,
 textarea {
-	box-sizing: border-box;
-	font: inherit;
-	/* -webkit-text-fill-color: currentColor; */
-	box-shadow: none;
-	/* appearance: none; */
+  box-sizing: border-box;
+  font: inherit;
+  /* -webkit-text-fill-color: currentColor; */
+  box-shadow: none;
+  /* appearance: none; */
 }
