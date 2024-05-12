@@ -6,23 +6,23 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 22.4px;
-    color: white;
+    color: var(--color-white);
 
-    background-color: #3B82F6;
+    background-color: var(--primary-500);
     border-radius: 8px;
 }
 
 .dark {
     compose: default;
 
-    background-color: #020617;
+    background-color: var(--grey-text-dark);
 }
 
 .transparent {
     compose: default;
 
-    color: #0F172A;
+    color: var(--grey-900);
 
     background-color: transparent;
-    border: 1px solid #020617;
+    border: 1px solid var(--grey-text-dark);
 }
