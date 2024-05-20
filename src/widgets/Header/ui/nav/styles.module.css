@@ -1,0 +1,49 @@
+.nav {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.list {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 33px;
+    text-wrap: nowrap;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--grey-700);
+}
+
+.searchInputContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 7px;
+    flex-grow: 1;
+}
+
+.searchInput {
+    height: 40px;
+    color: var(--grey-700);
+    width: 100%;
+}
+
+.searchInputContainer::before {
+    content: '';
+    position: absolute;
+    left: 10px; 
+    width: 20px; 
+    height: 20px;
+    background: url('src/shared/ui/icons/loupe.svg') no-repeat center center; 
+    background-size: contain;
+  }

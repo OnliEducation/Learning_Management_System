@@ -1,0 +1,21 @@
+/* .topCoursesWidgetContainer {
+    min-width: 1440px;
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+} */
+
+.topCoursesHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.allCoursesLink {
+    color: var(--primary-500);
+    margin-right: 24px;
+}
+
+.coursesContainer {
+    display: flex;
+    justify-content: space-between;
+}

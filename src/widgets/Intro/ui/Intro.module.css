@@ -1,0 +1,32 @@
+
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image {
+    width: 512px;
+    padding-right: 51.5px;
+}
+
+.content {
+    width: 592px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--grey-900);
+}
+.description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    margin-bottom: 8px;
+    color: var(--grey-700);
+}

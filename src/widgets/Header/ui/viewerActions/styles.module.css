@@ -1,0 +1,50 @@
+.container {
+    padding-left: 84px;
+}
+
+.list {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.login, .signup {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px; 
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease, border 0.3s ease;
+    box-sizing: border-box; 
+}
+
+.login {
+    border: 1px solid var(--grey-700);
+    color: var(--grey-700);
+    background-color: white; 
+}
+
+.signup {
+    background-color: var(--grey-700);
+    border: 1px solid var(--grey-700); 
+    color: white;
+}
+
+.login:hover, .signup:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.login:hover {
+    background-color: var(--grey-700);
+    color: white;
+}
+
+.signup:hover {
+    background-color: white;
+    color: var(--grey-700);
+}

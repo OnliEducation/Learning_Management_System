@@ -1,0 +1,21 @@
+/* .categoriesWidgetContainer {
+    min-width: 1440px;
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+} */
+
+.categoriesHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.allCategoriesLink {
+    color: var(--primary-500);
+    margin-right: 24px;
+}
+
+.categoriesContainer {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,41 @@
+.advantagesWidgetContainer {
+    /* min-width: 1440px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px); */
+    background-color: var(--grey-background);
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantage {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    position: relative;
+}
+
+.advantage:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -85.5px;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--grey-border);
+}
+
+.count {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41.6px;
+    color: var(--grey-900);
+}
+.advantageDescription {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--grey-900);
+}
