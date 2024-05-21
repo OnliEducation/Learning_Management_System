@@ -3,18 +3,16 @@
     padding-right: calc(50% - 640px);
 }
 
-.header {
-    composes: container;
-}
-
 .intro {
     composes: container;
+
     padding-top: 40px;
     padding-bottom: 25px;
 }
 
 .advantages {
     composes: container;
+
     padding-top: 40px;
     padding-bottom: 40px;
     margin-bottom: 60px;
@@ -22,15 +20,18 @@
 
 .topCategories {
     composes: container;
+
     margin-bottom: 60px;
 }
 
 .topCourses {
     composes: container;
+
     margin-bottom: 60px;
 }
 
 .invitation {
     composes: container;
+
     margin-bottom: 60px;
 }

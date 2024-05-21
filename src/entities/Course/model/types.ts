@@ -3,6 +3,7 @@ export interface ICourse {
    readonly image: string;
    readonly title: string;
    readonly author: string;
+   readonly ratingStars: number;
    readonly ratingCount: number;
    readonly price: number;
    readonly hoursCount: number;

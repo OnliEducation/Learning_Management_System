@@ -1,20 +1,19 @@
-.advantagesWidgetContainer {
-    /* min-width: 1440px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: calc(50% - 640px);
-    padding-right: calc(50% - 640px); */
+.container {
     background-color: var(--grey-background);
+}
+
+.list {
     display: flex;
     justify-content: space-between;
 }
 
 .advantage {
+    position: relative;
+
     display: flex;
     flex-direction: column;
-    gap: 8px;
     align-items: center;
-    position: relative;
+    gap: 8px;
 }
 
 .advantage:not(:last-child)::after {
@@ -23,7 +22,9 @@
     top: 0;
     right: -85.5px;
     bottom: 0;
+
     width: 4px;
+
     background-color: var(--grey-border);
 }
 
@@ -33,7 +34,8 @@
     line-height: 41.6px;
     color: var(--grey-900);
 }
-.advantageDescription {
+
+.description {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;

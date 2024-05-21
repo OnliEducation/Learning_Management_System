@@ -10,6 +10,7 @@ export function Course(props: ICourse): JSX.Element {
         image,
         title,
         author,
+        ratingStars,
         ratingCount,
         price,
         hoursCount,
@@ -26,7 +27,7 @@ export function Course(props: ICourse): JSX.Element {
             <h3 className={styles.courseTitle}>{title}</h3>
             <p className={styles.courseAuthor}>By {author}</p>
             <div className={styles.courseRatingContainer}>
-                <Rating value={5} />
+                <Rating value={ ratingStars } />
                 <p className={styles.courseRatingCount}>({ratingCount} Ratings)</p>
             </div>
             <p className={styles.courseInfos}>

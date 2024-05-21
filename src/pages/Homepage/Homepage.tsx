@@ -10,7 +10,7 @@ import styles from "./Homepage.module.css"
 export function Homepage() {
     return (
         <>
-            <Header className={styles.header} />
+            <Header className={styles.container} />
             <Intro className={styles.intro} />
             <Advantages className={styles.advantages} />
             <TopCategories className={styles.topCategories} categoryData={topCategoriesData} />

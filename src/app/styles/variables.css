@@ -69,4 +69,7 @@
     --warning-800:          #854D0E;
     --warning-900:          #713F12;
     --warning-950:          #422006;
+
+    /* shadow-colors */
+    --border-shadow:        #3B82F61F;
 }

@@ -1,24 +1,27 @@
 .category {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  padding: 24px 93px;
+
   background-color: var(--color-white);
   border: 1px solid var(--grey-border);
   border-radius: 16px;
-  box-shadow: 0px 0px 8px 0px #3B82F61F;
-  padding: 24px 93px;
-  position: relative;
+  box-shadow: 0px 0px 8px 0px var(--border-shadow);
 }
 
 .iconContainer {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: var(--primary-100);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  background-color: var(--primary-100);
 }
 
 .categoryTitle {
@@ -29,9 +32,7 @@
 }
 
 .count {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 25.6px;
   margin: 0;
+
   color: var(--grey-700);
 }

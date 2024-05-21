@@ -16,17 +16,19 @@ export function TopCategories(props: ITopCategories): JSX.Element {
           See All
         </Link>
       </header>
-      <div className={styles.categoriesContainer}>
+      <ul className={styles.categoriesContainer}>
         {categoryData?.map((item) => (
-          <Category
-            key={item.category}
-            link={item.link}
-            icon={item.icon}
-            category={item.category}
-            courseCount={item.courseCount}
-          />
+          <li key={item.id}>
+            <Category
+              id={item.id} // <-- Вопрос Дане
+              link={item.link}
+              icon={item.icon}
+              category={item.category}
+              courseCount={item.courseCount}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
