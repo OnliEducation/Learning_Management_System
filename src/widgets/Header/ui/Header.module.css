@@ -1,0 +1,11 @@
+.container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 65px;
+
+  border-bottom: 1px solid var(--grey-border);
+}

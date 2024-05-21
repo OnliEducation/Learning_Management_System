@@ -1,0 +1,35 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.invitation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 549px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-black);
+}
+
+.description {
+    margin-bottom: 8px;
+
+    color: var(--grey-800);
+}
+
+.buttonLink {
+    display: inline-block;
+}
