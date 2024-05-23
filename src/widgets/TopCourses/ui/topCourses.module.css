@@ -1,13 +1,27 @@
 .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 24px;
 }
 
-.allCoursesLink {
-    margin-right: 24px;
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33.6px;
+}
 
+.linkAll {
+    padding: 10px 24px;
+    min-height: 48px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22.4px;
     color: var(--primary-500);
+
+    cursor: pointer;
 }
 
 .coursesContainer {

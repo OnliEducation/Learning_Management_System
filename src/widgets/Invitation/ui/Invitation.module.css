@@ -30,6 +30,14 @@
     color: var(--grey-800);
 }
 
+.image {
+    width: 400px;
+}
+
+.men {
+    width: 471.5px;
+}
+
 .buttonLink {
     display: inline-block;
 }

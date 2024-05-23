@@ -30,8 +30,32 @@
     margin-bottom: 60px;
 }
 
+
+.topInstructors {
+    composes: container;
+
+    margin-bottom: 60px;
+}
+
+
+.feedBackList {
+    composes: container;
+
+    padding-top: 80px;
+    padding-right: 0;
+    padding-bottom: 44px;
+    margin-bottom: 60px;
+}
+
 .invitation {
     composes: container;
 
     margin-bottom: 60px;
+}
+
+.footer {
+    composes: container;
+
+    padding-top: 80px;
+    padding-bottom: 120px;
 }
