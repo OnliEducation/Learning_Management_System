@@ -1,70 +1,60 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import { ICarousel } from './types'
-import './Carousel.module.css'
+import styles from './Carousel.module.css';
+import Chevron from "../../icons/chevron.svg?react"
 
 export function Carousel(props: ICarousel): JSX.Element {
     const {
         children,
-        countVisibleElements = 1,
-        autoWidth,
         responsive,
-        disableDotsControls,
         className,
         paddingLeft,
         paddingRight,
-    } = props
+    } = props;
 
-    const [activeIndex, setActiveIndex] = useState<number>(0);
+    const carouselRef = useRef<AliceCarousel>(null);
 
-    const minActiveIndexElement = 0;
-    const maxActiveIndexElement = children?.length ? children.length - countVisibleElements : 0;
+    const renderPrevButton = (): JSX.Element => {
+        return (
+            <button
+                className={styles.button + ' ' + styles.prev}
+                onClick={() => carouselRef.current?.slidePrev()}
+            >
+                <Chevron />
+            </button>
+        );
+    };
 
-    const isDisabledSlidePrev = activeIndex <= minActiveIndexElement;
-    const isDisabledSlideNext = activeIndex >= maxActiveIndexElement;
-
-    const getSlidePrev = () => {
-        if (isDisabledSlidePrev) {
-            return
-        }
-        setActiveIndex(activeIndex - 1)
-    }
-
-    const getSlideNext = () => {
-        if (isDisabledSlideNext) {
-            return
-        }
-        setActiveIndex(activeIndex + 1)
-    }
+    const renderNextButton = (): JSX.Element => {
+        return (
+            <button
+                className={styles.button + ' ' + styles.next}
+                onClick={() => carouselRef.current?.slideNext()}
+            >
+                <Chevron />
+            </button>
+        );
+    };
 
     return (
-        <div className={className}>
+        <div className={className ? styles.container + ' ' + className : styles.container}>
             <AliceCarousel
-                autoWidth={autoWidth}
-                mouseTracking
-                responsive={responsive}
-                activeIndex={activeIndex}
+                ref={carouselRef}
                 items={children}
-                disableButtonsControls
-                disableDotsControls={disableDotsControls}
+                responsive={responsive}
                 paddingLeft={paddingLeft}
                 paddingRight={paddingRight}
+                renderPrevButton={renderPrevButton}
+                renderNextButton={renderNextButton}
+                mouseTracking
+                keyboardNavigation
+                disableDotsControls
+                infinite
+                autoPlay
+                autoPlayInterval={2000}
             />
-            <button
-                type='button'
-                className='btn-prev'
-                onClick={getSlidePrev}
-                disabled={isDisabledSlidePrev}>
-                &lang;
-            </button>
-            <button
-                type='button'
-                className='btn-next'
-                onClick={getSlideNext}
-                disabled={isDisabledSlideNext}>
-                &rang;
-            </button>
         </div>
-    )
+    );
 }

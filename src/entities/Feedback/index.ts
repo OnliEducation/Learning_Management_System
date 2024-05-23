@@ -1,1 +1,2 @@
-console.log('test for commit')
+export { FeedBack } from "./ui/Feedback";
+export type { IFeedback } from "./model/types"

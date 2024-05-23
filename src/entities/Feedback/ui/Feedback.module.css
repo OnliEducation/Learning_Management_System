@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    max-width: 432px;
+    justify-content: left;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--grey-border);
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px 0px #3B82F61F;
+}
+
+.description {
+    margin: 0;
+
+    text-align: left;
+}
+
+.infoAuthor {
+    display: flex;
+    gap: 8px;
+}
+
+.avatar {
+    display: block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+
+    border-radius: 50%;    
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    margin: auto 0;
+}
+
+.author {
+    display: block;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28.8px;
+    color: var(--color-black);
+}
+
+.profession {
+    display: block;
+
+    font-size: 14px;
+    line-height: 21px;
+}

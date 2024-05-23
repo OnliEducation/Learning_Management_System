@@ -9,7 +9,7 @@ const ratingStyles: ItemStyles = {
     inactiveFillColor: '#CBD5E1', // grey/300
 }
 
-export function Rating(props: IRating) : JSX.Element {
+export function Rating(props: IRating): JSX.Element {
     const { value, maxWidth = 100, className } = props
 
     return (
@@ -21,5 +21,4 @@ export function Rating(props: IRating) : JSX.Element {
             className={className}
         />
     )
-
 }
