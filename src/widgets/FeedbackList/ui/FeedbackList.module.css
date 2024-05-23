@@ -1,0 +1,13 @@
+.content {
+    background-color: var(--grey-background);    
+}
+
+.heading {
+    margin-bottom: 24px;
+    max-width: 308px;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33.6px;
+    color: var(--color-black);
+}

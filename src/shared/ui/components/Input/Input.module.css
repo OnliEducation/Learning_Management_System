@@ -2,28 +2,30 @@
     padding: 10px;
     padding-left: 40px;
 
+    color: var(--color-black);
+
     border-radius: 8px;
     border: 1px solid var(--grey-700);
-    color: var(--color-black);
 }
 
 .default::placeholder {
-    color: var(--grey-700);
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    color: var(--grey-700);
 }
 
 .auth {
     compose: default;
+
     padding: 16px;
 
     border: 1px solid var(--grey-border);
 }
 
 .auth::placeholder {
-    color: var(--grey-disable);
     font-weight: 400;
     font-size: 16px;
     line-height: 25.6px;
+    color: var(--grey-disable);
 }
