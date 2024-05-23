@@ -19,8 +19,8 @@ export function Footer({ className }: IFooter): JSX.Element {
             </div>
 
             <div className={styles.help}>
-                <h3>Get Help</h3>
-                <ul>
+                <h3 className={styles.title}>Get Help</h3>
+                <ul className={styles.list}>
                     <li>Contact Us</li>
                     <li>Latest Articles</li>
                     <li>FAQ</li>
@@ -28,8 +28,8 @@ export function Footer({ className }: IFooter): JSX.Element {
             </div>
 
             <div className={styles.programs}>
-                <h3>Programs</h3>
-                <ul>
+                <h3 className={styles.title}>Programs</h3>
+                <ul className={styles.list}>
                     <li>Art & Design</li>
                     <li>Business</li>
                     <li>IT & Software</li>
@@ -39,24 +39,24 @@ export function Footer({ className }: IFooter): JSX.Element {
             </div>
 
             <div className={styles.contact}>
-                <h3>Contact Us</h3>
-                <address>
-                    <dl>
-                        <div>
-                            <dt>Address:</dt>
-                            <dd>123 Main Street, Anytown, CA 12345</dd>
+                <h3 className={styles.title}>Contact Us</h3>
+                <address className={styles.address}>
+                    <dl className={styles.descriptionList}>
+                        <div className={styles.descriptionElement}>
+                            <dt className={styles.descriptionTermin}>Address:</dt>
+                            <dd className={styles.descriptionDetails}>123 Main Street, Anytown, CA 12345</dd>
                         </div>
 
-                        <div>
-                            <dt>Tel:</dt>
-                            <dd>
+                        <div className={styles.descriptionElement}>
+                            <dt className={styles.descriptionTermin}>Tel:</dt>
+                            <dd className={styles.descriptionDetails}>
                                 <a href="tel:+1234567890">+(123) 456-7890</a>
                             </dd>
                         </div>
 
-                        <div>
-                            <dt>Mail:</dt>
-                            <dd>
+                        <div className={styles.descriptionElement}>
+                            <dt className={styles.descriptionTermin}>Mail:</dt>
+                            <dd className={styles.descriptionDetails}>
                                 <a href="mailto:bywayedu@webkul.in">bywayedu@webkul.in</a>
                             </dd>
                         </div>

@@ -4,7 +4,6 @@ import Quotes from '../../../shared/ui/icons/quotes.svg?react'
 
 export function FeedBack(props: IFeedback): JSX.Element {
     const {
-        icon,
         description,
         avatar,
         author,
@@ -12,11 +11,13 @@ export function FeedBack(props: IFeedback): JSX.Element {
     } = props;
     return (
         <div className={styles.container}>
-            <span>{icon || <Quotes />}</span>
+            <span>
+                <Quotes />
+            </span>
             <p className={styles.description}>{description}</p>
             <div className={styles.infoAuthor}>
                 <span className={styles.avatar}>
-                    <img src={avatar} alt={`Avatar ${author}`} />
+                    <img src={avatar} alt={`${author} avatar`} />
                 </span>
                 <div className={styles.wrapper}>
                     <span className={styles.author}>{author}</span>

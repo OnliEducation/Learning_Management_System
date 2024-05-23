@@ -19,7 +19,7 @@ export function FeedBackList(props: IFeedBackList): JSX.Element {
     } = props;
 
     return (
-        <div className={className ? styles.content + ' ' + className : styles.content}>
+        <section className={className ? styles.content + ' ' + className : styles.content}>
             <h2 className={styles.heading}>What Our Customer Say About Us</h2>
             <Carousel
                 className={styles.carousel}
@@ -35,6 +35,6 @@ export function FeedBackList(props: IFeedBackList): JSX.Element {
                     />
                 ))}
             </Carousel>
-        </div>
+        </section>
     )
 }

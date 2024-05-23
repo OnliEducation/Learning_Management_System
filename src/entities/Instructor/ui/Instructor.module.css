@@ -1,5 +1,4 @@
 .container {
-    width: 212px;
     padding: 16px;
 
     border: 1px solid var(--grey-border);
@@ -31,8 +30,8 @@
     height: 132px;
     margin: 0 1.5px;
     margin-bottom: 16px;
-
     overflow: hidden;
+
     border-radius: 8px;
 }
 

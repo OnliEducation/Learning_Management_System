@@ -20,7 +20,7 @@ export function TopInstructors(props: ITopInstructors): JSX.Element {
                         author={item.author}
                         profession={item.profession}
                         rating={item.rating}
-                        students={item.students}
+                        studentsCount={item.studentsCount}
                     />
                 ))}
             </div>

@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 8px;
     padding: 24px;
-    width: 432px;
+    max-width: 432px;
     justify-content: left;
 
     background-color: var(--color-white);
@@ -27,9 +27,9 @@
     display: block;
     width: 60px;
     height: 60px;
-
-    border-radius: 50%;
     overflow: hidden;
+
+    border-radius: 50%;    
 }
 
 .avatar img {

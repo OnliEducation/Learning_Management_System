@@ -8,13 +8,13 @@ export function Instructor(props: IInstructor): JSX.Element {
         author,
         profession,
         rating,
-        students,
+        studentsCount,
     } = props;
     return (
         <div className={styles.container}>
             <div className={styles.personalInfo}>
                 <span className={styles.avatar}>
-                    <img src={avatar} alt={`Avatar ${author}`} />
+                    <img src={avatar} alt={`${author} avatar`} />
                 </span>
                 <p className={styles.author}>{author}</p>
                 <p className={styles.profession}>{profession}</p>
@@ -27,7 +27,7 @@ export function Instructor(props: IInstructor): JSX.Element {
                     </span>
                 </span>
                 <p className={styles.students}>
-                    {`${students} Students`}
+                    {`${studentsCount} Students`}
                 </p>
             </div>
         </div>

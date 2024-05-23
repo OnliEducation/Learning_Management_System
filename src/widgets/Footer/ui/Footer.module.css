@@ -10,8 +10,8 @@
     background-color: var(--grey-800);
 }
 
-h3,
-.description span {
+.title,
+.logoWrapper {
     font-size: 18px;
     font-weight: 600;
     line-height: 28.8px;
@@ -26,45 +26,33 @@ h3,
     max-width: 416px;
 }
 
-ul,
-li {
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-}
-
-p {
-    margin: 0;
-}
-
 .logoWrapper {
     display: flex;
     gap: 14px;
     align-items: center;
 }
 
-.help h3,
-.programs h3,
-.contact h3 {
+.help .title,
+.programs .title,
+.contact .title {
     margin-bottom: 8px;
 }
 
-.help ul,
-.programs ul {
+.help .list,
+.programs .list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-address {
+.address {
     margin-bottom: 24px;
 
     font-style: normal;
 }
 
-address dl {
+.descriptionList {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -75,19 +63,19 @@ address dl {
     list-style: none;
 }
 
-address dl>div {
+.descriptionElement {
     display: flex;
 }
 
-address dl dt {
+.descriptionTermin {
     margin-right: 0.5em;
 }
 
-address dl dd {
+.descriptionDetails {
     margin: 0;
 }
 
-address dl dd a {
+.descriptionDetails a {
     text-decoration: none;
     color: inherit;
 }
