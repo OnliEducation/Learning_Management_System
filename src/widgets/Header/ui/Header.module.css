@@ -1,11 +1,145 @@
-.container {
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 64px;
+
+  border-bottom: 1px solid var(--grey-border);
+}
+
+.linkLogo {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+
+  text-decoration: none;
+}
+
+.logo {
+  margin-right: 6px;
+
+  transform: translateY(-14%);
+}
+
+.textLogo {
+  font-weight: 500;
+  line-height: 19.36px;
+  color: var(--grey-700)
+}
+
+.siteList {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin-right: 66px;
+
+  text-wrap: nowrap;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--grey-700);
+}
+
+.navCategory {
+  composes: navLink;
+
+  margin-right: 23px;
+}
+
+.searchInputContainer {
   position: relative;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center;  
   flex-grow: 1;
-  height: 65px;
+  margin-right: 30px;
+}
 
-  border-bottom: 1px solid var(--grey-border);
+.searchInput {
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--grey-700);
+}
+
+.searchInputContainer::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+
+  width: 20px;
+  height: 20px;
+
+  background: url('src/shared/ui/icons/loupe.svg') no-repeat center center;
+  background-size: contain;
+}
+
+
+.userList {
+  display: flex;
+  align-items: center;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-right: 16px;
+}
+
+.login,
+.signup {
+  padding: 10px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease, border 0.3s ease;
+
+  cursor: pointer;
+}
+
+.login {
+  margin-right: 24px;
+
+  color: var(--grey-700);
+
+  border: 1px solid var(--grey-700);  
+  background-color: var(--color-white);
+}
+
+.signup {
+  color: var(--color-white);
+
+  background-color: var(--grey-700);
+  border: 1px solid var(--grey-700);
+}
+
+.login:hover,
+.signup:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.login:hover {
+  color: var(--color-white);
+
+  background-color: var(--grey-700);
+}
+
+.signup:hover {
+  color: var(--grey-700);
+
+  background-color: var(--color-white);
 }
