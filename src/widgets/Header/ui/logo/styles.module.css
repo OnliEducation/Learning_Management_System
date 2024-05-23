@@ -1,6 +1,8 @@
 .logo {
   display: flex;
   align-items: center;
+  padding: 10px 10px 10px 0;
+  margin-right: 24px;
 
   text-decoration: none;
 }

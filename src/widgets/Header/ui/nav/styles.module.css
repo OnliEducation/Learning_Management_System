@@ -1,13 +1,10 @@
 .nav {
-    height: 100%;
     flex-grow: 1;
 }
 
 .list {
     display: flex;
     align-items: center;
-    gap: 33px;
-    height: 100%;
     margin: 0;
 
     text-wrap: nowrap;
@@ -16,7 +13,7 @@
 .link {
     display: flex;
     align-items: center;
-    height: 100%;
+    padding: 10px;
 
     font-weight: 500;
     font-size: 14px;
@@ -24,14 +21,17 @@
     color: var(--grey-700);
 }
 
+.link:first-child {
+    margin-right: 23px;
+}
+
 .searchInputContainer {
     position: relative;
 
     display: flex;
     align-items: center;
-    width: 100%;
-    margin-right: 7px;
     flex-grow: 1;
+    margin-right: 40px;
 }
 
 .searchInput {
