@@ -1,0 +1,43 @@
+.container {
+    background-color: var(--grey-background);
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantage {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.advantage:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -85.5px;
+    bottom: 0;
+
+    width: 4px;
+
+    background-color: var(--grey-border);
+}
+
+.count {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 41.6px;
+    color: var(--grey-900);
+}
+
+.description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--grey-900);
+}

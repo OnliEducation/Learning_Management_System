@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.allCoursesLink {
+    margin-right: 24px;
+
+    color: var(--primary-500);
+}
+
+.coursesContainer {
+    display: flex;
+    justify-content: space-between;
+}

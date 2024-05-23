@@ -2,6 +2,7 @@
     display: flex;
     gap: 6px;
     padding: 10px 24px;
+    align-items: center;
 
     font-size: 14px;
     font-weight: 500;
@@ -10,16 +11,18 @@
 
     background-color: var(--primary-500);
     border-radius: 8px;
+    border: none;
+    cursor: pointer;
 }
 
 .dark {
-    compose: default;
+    composes: default;
 
     background-color: var(--grey-text-dark);
 }
 
 .transparent {
-    compose: default;
+    composes: default;
 
     color: var(--grey-900);
 
