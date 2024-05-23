@@ -8,7 +8,7 @@ export function TopInstructors(props: ITopInstructors): JSX.Element {
     return (
         <section className={className ? styles.content + ' ' + className : styles.content}>
             <header className={styles.header}>
-                <h2 className={styles.heading}>Top Instructors</h2>
+                <h2 className={styles.title}>Top Instructors</h2>
                 <a className={styles.link}>See All</a>
             </header>
 

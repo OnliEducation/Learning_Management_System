@@ -9,13 +9,14 @@ export function TopCategories(props: ITopCategories): JSX.Element {
   const { className, categoryData } = props;
 
   return (
-    <section className={styles.categoriesWidgetContainer + ' ' + className}>
-      <header className={styles.categoriesHeader}>
-        <h2>Top Categories</h2>
-        <Link className={styles.allCategoriesLink} to="/categories-page">
+    <section className={className ? className : ''}>
+      <header className={styles.header}>
+        <h2 className={styles.title}>Top Categories</h2>
+        <Link className={styles.linkAll} to="/categories-page">
           See All
         </Link>
       </header>
+
       <ul className={styles.categoriesContainer}>
         {categoryData?.map((item) => (
           <li key={item.id}>

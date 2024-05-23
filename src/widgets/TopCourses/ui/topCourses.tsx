@@ -9,12 +9,13 @@ export function TopCourses(props: ITopCourses): JSX.Element {
 
     return (
         <section className={className ? className : ''}>
-            <div className={styles.header}>
-                <h2>Top Courses</h2>
-                <Link className={styles.allCoursesLink} to="/category-page">
+            <header className={styles.header}>
+                <h2 className={styles.title}>Top Courses</h2>
+                <Link className={styles.linkAll} to="/courses-page">
                     See All
                 </Link>
-            </div>
+            </header>
+
             <ul className={styles.coursesContainer}>
                 {courseData?.map((item) => (
                     <li key={item.title}>
