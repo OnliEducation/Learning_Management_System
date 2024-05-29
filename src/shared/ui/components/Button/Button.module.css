@@ -1,8 +1,9 @@
 .default {
     display: flex;
     gap: 6px;
-    padding: 10px 24px;
+    padding: 13px 24px;
     align-items: center;
+    justify-content: center;
 
     font-size: 14px;
     font-weight: 500;

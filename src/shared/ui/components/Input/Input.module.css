@@ -16,7 +16,7 @@
 }
 
 .auth {
-    compose: default;
+    composes: default;
 
     padding: 16px;
 
