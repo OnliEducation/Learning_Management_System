@@ -4,17 +4,14 @@
 }
 
 .container {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+    display: flex;
+    align-items: center;
     height: calc(100vh - 64px) ;
+            
     background-image: url('../../shared/ui/images/GirlWithBook.jpeg');
     background-size:contain;
     background-repeat: no-repeat;
     background-position:right;
-
-    display: flex;
-
-    align-items: center;
-    
-
-    padding-left: calc(50% - 640px);
-    padding-right: calc(50% - 640px);
 }

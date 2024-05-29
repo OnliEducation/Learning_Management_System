@@ -20,8 +20,6 @@ export function LoginForm(): JSX.Element {
             alert('Please fill in both fields.');
             return;
         }
-
-        console.log(username, password)
     }
 
     return (

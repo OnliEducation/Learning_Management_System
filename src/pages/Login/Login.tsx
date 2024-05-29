@@ -10,7 +10,6 @@ export function Login() {
             <div className={styles.container}>
                 <LoginForm />
             </div>
-
         </>
     )
 }
