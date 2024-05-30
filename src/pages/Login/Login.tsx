@@ -7,9 +7,7 @@ export function Login() {
     return (
         <>
             <Header className={styles.header} />
-            <div className={styles.container}>
-                <LoginForm />
-            </div>
+            <LoginForm className={styles.login} />
         </>
     )
 }

@@ -1,16 +1,21 @@
+.mainContainer {
+    display: flex;
+    gap: 42px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     gap: 24px;
     width: 690px;
+    padding-top: 213px;
 }
 
 .title {
-    text-align: center;
-
     font-weight: 600;
     font-size: 32px;
     line-height: 41.6px;
+    text-align: center;
 
     color: var(--grey-900);
 }
@@ -44,37 +49,38 @@
 .divider {
     display: flex;
     align-items: center;
-    text-align: center;
 
     font-size: 14px;
     line-height: 21px;
+    text-align: center;
 
     color: var(--grey-disable);
 }
 
 .divider::before,
 .divider::after {
-  content: "";
-  flex-grow: 1;
-  height: 1px;
-  
-  background-color: var(--grey-disable);
+    content: "";
+
+    flex-grow: 1;
+    height: 1px;
+
+    background-color: var(--grey-disable);
 }
 
 .divider::before {
     margin-right: 14px;
-  }
-  
-  .divider::after {
-    margin-left: 14px;
-  }
+}
 
-  .socialsContainer {
+.divider::after {
+    margin-left: 14px;
+}
+
+.socialsContainer {
     display: flex;
     gap: 15px;
-  }
+}
 
-  .social {
+.social {
     width: 220px;
     display: flex;
     gap: 6px;
@@ -87,7 +93,7 @@
     border-radius: 8px;
 
     cursor: pointer;
-  }
+}
 
 .facebookText,
 .googleText,
@@ -106,5 +112,16 @@
 }
 
 .microsoftText {
-    color: #000000;
+    color: var(--color-black);
+}
+
+.image {
+    min-width: 628px;
+    max-width: 628px;
+    height: 959px;
+
+    background-image: url('src/shared/ui/images/LoginGirl.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
 }

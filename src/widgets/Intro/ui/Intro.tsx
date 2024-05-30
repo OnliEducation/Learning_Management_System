@@ -3,6 +3,7 @@ import { Button } from '../../../shared/ui/components/Button';
 
 import styles from "./Intro.module.css"
 import { IIntro } from '../model/types';
+import IntroImage from "../../../shared/ui/images/Intro.png"
 
 export function Intro({ className }: IIntro): JSX.Element {
 
@@ -19,7 +20,7 @@ export function Intro({ className }: IIntro): JSX.Element {
                     </Link>
                 </div>
             </div>
-            <img className={styles.image} src={'src/shared/ui/images/Hero.png'} alt='Intro Image' />
+            <img className={styles.image} src={IntroImage} alt='Intro Image' />
         </section>
     )
 }
