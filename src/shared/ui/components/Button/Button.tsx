@@ -4,7 +4,7 @@ import { IButton } from './types';
 export function Button(props: IButton): JSX.Element {
     const {
         children,
-        type='button',
+        type = 'button',
         variant = 'default',
         onClick,
         className,
