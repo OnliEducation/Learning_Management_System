@@ -1,9 +1,4 @@
-.header {
-    padding-left: calc(50% - 640px);
-    padding-right: calc(50% - 640px);
-}
-
-.login {
+.container {
     padding-left: calc(50% - 640px);
     padding-right: calc(50% - 640px);
 }

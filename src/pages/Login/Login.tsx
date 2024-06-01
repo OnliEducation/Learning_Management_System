@@ -6,8 +6,8 @@ import styles from "./Login.module.css"
 export function Login() {
     return (
         <>
-            <Header className={styles.header} />
-            <LoginForm className={styles.login} />
+            <Header className={styles.container} />
+            <LoginForm className={styles.container} />
         </>
     )
 }

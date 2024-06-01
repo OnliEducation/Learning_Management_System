@@ -1,4 +1,3 @@
-import { FormEvent, useState } from "react";
 import { Button } from "../../../shared/ui/components/Button";
 import { Input } from "../../../shared/ui/components/Input";
 import { Link } from "react-router-dom";
@@ -11,30 +10,18 @@ import { ILoginForm } from "../model/types";
 
 
 export function LoginForm({ className }: ILoginForm): JSX.Element {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    function handleFormSubmit(e: FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-
-        if (!username || !password) {
-            alert('Please fill in both fields.');
-            return;
-        }
-    }
 
     return (
         <section className={className ? className + ' ' + styles.mainContainer : styles.mainContainer}>
             <div className={styles.container}>
                 <h1 className={styles.title}>Sign in to your account</h1>
-                <form className={styles.form} onSubmit={handleFormSubmit}>
+                <form className={styles.form} action="https://echo.htmlacademy.ru" method="post" target="_blank">
                     <div className={styles.inputContainer}>
                         <label className={styles.inputLabel} htmlFor="username">Email</label>
                         <Input variant="auth"
                             type="text"
                             id="username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            name="username or email ID"
                             placeholder="Username or Email ID"
                         />
                     </div>
@@ -43,8 +30,7 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                         <Input variant="auth"
                             type="password"
                             id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            name="password"
                             placeholder="Enter Password"
                         />
                     </div>
