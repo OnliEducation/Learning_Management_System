@@ -4,6 +4,7 @@ import { IButton } from './types';
 export function Button(props: IButton): JSX.Element {
     const {
         children,
+        type='button',
         variant = 'default',
         onClick,
         className,
@@ -13,7 +14,7 @@ export function Button(props: IButton): JSX.Element {
 
     return (
         <button
-            type='button'
+            type={type}
             onClick={onClick}
             className={className ? className + ' ' + buttonVariant : buttonVariant}
         >

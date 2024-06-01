@@ -1,0 +1,197 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.banner {
+    width: 628px;
+    height: 959px;
+    background-image: url('src/shared/ui/images/SignUp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width:1441px) {
+    .banner {
+        margin-left: auto;
+    }
+}
+
+.formWrapper {
+    padding-top: 94px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 24px;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 41.6px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.fieldset {
+    padding: 0;
+    margin: 0;
+
+    border: none;
+}
+
+.groupPersonal {
+    composes: fieldset;
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28.8px;
+    text-align: left;
+}
+
+.groupPersonal .label {
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+.wrappperFirstName,
+.wrappperLastName {
+    display: flex;
+    flex: 1;
+}
+
+.inputFirstName,
+.inputLastName {
+    flex: 1;
+}
+
+.groupContact {
+    composes: fieldset;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.wrappperUsername,
+.wrappperEmail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.groupPassword {
+    composes: fieldset;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.wrappperPassword,
+.wrappperConfirmPassword {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.inputPassword,
+.inputConfirmPassword {
+    flex: 1;
+}
+
+.button {
+    max-width: 183px;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 21px;
+
+    color: var(--grey-disable);
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+
+    background-color: var(--grey-disable);
+}
+
+.divider::before {
+    margin-right: 14px;
+}
+
+.divider::after {
+    margin-left: 14px;
+}
+
+.socialsContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.social {
+    width: 220px;
+    display: flex;
+    gap: 6px;
+    padding: 10px 24px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    border: 1px solid var(--grey-disable);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.social:hover {
+    opacity: 0.55;
+}
+
+.facebookText,
+.googleText,
+.microsoftText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.facebookText {
+    color: #0866FF;
+}
+
+.googleText {
+    color: #EA4335;
+}
+
+.microsoftText {
+    color: var(--color-black);
+}
