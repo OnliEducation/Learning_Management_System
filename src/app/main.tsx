@@ -7,7 +7,7 @@ import { Homepage } from '../pages/Homepage';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Homepage />      
+      <Homepage />
     </BrowserRouter>
   </React.StrictMode>
 )

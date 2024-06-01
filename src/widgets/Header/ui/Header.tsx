@@ -17,27 +17,41 @@ export function Header({ className }: IHeader): JSX.Element {
                 </Link>
 
                 <ul className={styles.siteList}>
-                    <Link className={styles.navCategory} to={'/categories'}>
-                        Categories
-                    </Link>
-                    <div className={styles.searchInputContainer}>
+                    <li className={styles.navCategory}>
+                        <Link to={'/categories'}>
+                            Categories
+                        </Link>
+                    </li>
+
+                    <li className={styles.searchInputContainer}>
                         <Input className={styles.searchInput} />
-                    </div>
-                    <Link className={styles.navLink} to={'/categories'}>
-                        Teach on Byway
-                    </Link>
+                    </li>
+
+                    <li className={styles.navLink}>
+                        <Link to={'/categories'}>
+                            Teach on Byway
+                        </Link>
+                    </li>
                 </ul>
 
                 <ul className={styles.userList}>
-                    <Link className={styles.cart} to={'/checkout'}>
-                        <CartIcon />
-                    </Link>
-                    <Link className={styles.login} to={'/login'}>
-                        Log In
-                    </Link>
-                    <Link className={styles.signup} to={'/signup'}>
-                        Sign Up
-                    </Link>
+                    <li className={styles.cart}>
+                        <Link  to={'/checkout'}>
+                            <CartIcon />
+                        </Link>
+                    </li>
+
+                    <li className={styles.login}>
+                        <Link  to={'/login'}>
+                            Log In
+                        </Link>
+                    </li>
+
+                    <li className={styles.signup}>
+                        <Link  to={'/signup'}>
+                            Sign Up
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

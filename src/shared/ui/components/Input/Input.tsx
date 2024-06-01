@@ -4,6 +4,9 @@ import { IInput } from './types'
 
 export function Input(props: IInput): JSX.Element {
     const {
+        id,
+        type = 'text',
+        name,
         value,
         onChange,
         onBlur,
@@ -23,8 +26,10 @@ export function Input(props: IInput): JSX.Element {
 
     return (
         <input
+            id={id}
+            name={name}
             className={className ? className + ' ' + inputVariant : inputVariant}
-            type='text'
+            type={type}
             value={value ?? inputData}
             placeholder={placeholder}
             onBlur={onBlur}
