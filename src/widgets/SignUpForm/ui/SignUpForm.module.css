@@ -7,6 +7,7 @@
 .banner {
     width: 628px;
     height: 959px;
+
     background-image: url('src/shared/ui/images/SignUp.jpg');
     background-size: cover;
     background-position: center;
@@ -20,6 +21,7 @@
 
 .formWrapper {
     padding-top: 94px;
+
     text-align: center;
 }
 
@@ -127,8 +129,9 @@
 .divider {
     display: flex;
     align-items: center;
-    text-align: center;
+    margin-bottom: 24px;
 
+    text-align: center;
     font-size: 14px;
     line-height: 21px;
 
