@@ -12,10 +12,11 @@
   "dependencies": {
     "@smastrom/react-rating": "^1.5.0",
     "eslint-plugin-react": "^7.34.1",
+    "firebase": "^10.12.2",
     "react": "^18.3.1",
     "react-alice-carousel": "^2.9.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
