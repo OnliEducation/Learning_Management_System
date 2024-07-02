@@ -18,10 +18,10 @@ export function Input(props: IInput): JSX.Element {
 
     const inputVariant = variant in styles ? styles[variant] : ''; // Types Guard
 
-    const [inputData, setinputData] = useState<string>('')
+    const [inputData, setInputData] = useState<string>('')
 
     function onChangeinputData(e: ChangeEvent<HTMLInputElement>) {
-        setinputData(e.target.value)
+        setInputData(e.target.value)
     }
 
     return (

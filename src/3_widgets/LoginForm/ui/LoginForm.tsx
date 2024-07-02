@@ -9,17 +9,46 @@ import styles from "./LoginForm.module.css"
 import { ILoginForm } from "../model/types";
 
 
-export function LoginForm({ className }: ILoginForm): JSX.Element {
+import { useState, ChangeEvent } from "react";
+import { useAppDispatch, useAppSelector } from "../../../6_shared/lib/store";
+import { signInUser } from "../../../4_features/auth/login/loginThunk";
 
+
+export function LoginForm({ className }: ILoginForm): JSX.Element {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const { status, error, user } = useAppSelector(state => state.auth);
+
+    // TODO: изменить тупую типизацию на умную e
+
+    function onChangeEmail(e: ChangeEvent<HTMLInputElement>) {
+        setEmail(e.target.value);
+    }
+
+    function onChangePassword(e: ChangeEvent<HTMLInputElement>) {
+        setPassword(e.target.value);
+    }
+
+    const dispatch = useAppDispatch();
+
+    function handleLogin() {
+        dispatch(signInUser({ email, password }));
+    }
     return (
         <section className={className ? className + ' ' + styles.mainContainer : styles.mainContainer}>
             <div className={styles.container}>
+                {status === 'loading' && <p>Loading...</p>}
+                {status === 'failed' && <p>Error: {error}</p>}
+                {user && <p>Welcome, {user.email}</p>}
                 <h1 className={styles.title}>Sign in to your account</h1>
-                <form className={styles.form} action="https://echo.htmlacademy.ru" method="post" target="_blank">
+                <form className={styles.form} onSubmit={(e) => e.preventDefault()}> {/*TODO: убрать onSubmit в таком виде*/}
                     <div className={styles.inputContainer}>
                         <label className={styles.inputLabel} htmlFor="username">Email</label>
                         <Input variant="auth"
                             type="text"
+                            value={email}
+                            onChange={onChangeEmail}
                             id="username"
                             name="username or email ID"
                             placeholder="Username or Email ID"
@@ -29,13 +58,15 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                         <label className={styles.inputLabel} htmlFor="password">Password</label>
                         <Input variant="auth"
                             type="password"
+                            value={password}
+                            onChange={onChangePassword}
                             id="password"
                             name="password"
                             placeholder="Enter Password"
                         />
                     </div>
                     <div>
-                        <Button type="submit" variant='dark'>
+                        <Button onClick={() => handleLogin()} type="submit" variant='dark'>
                             <span className={styles.buttonText}>Sign In</span>
                             <Arrow />
                         </Button>
