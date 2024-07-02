@@ -1,7 +1,11 @@
+import { Providers } from "./providers";
 import { AppRouter } from "./routers";
 
+
 export function App() {
-    return(
-        <AppRouter />
+    return (
+        <Providers>
+            <AppRouter />
+        </Providers>
     )
 }
