@@ -14,6 +14,7 @@ export function Input(props: IInput): JSX.Element {
         placeholder = 'Search courses',
         variant = 'default',
         className,
+        required,
     } = props
 
     const inputVariant = variant in styles ? styles[variant] : ''; // Types Guard
@@ -35,6 +36,7 @@ export function Input(props: IInput): JSX.Element {
             onBlur={onBlur}
             onFocus={onFocus}
             onChange={onChange ?? onChangeinputData}
+            required={required}
         />
     )
 }

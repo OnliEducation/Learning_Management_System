@@ -8,17 +8,16 @@ import Microsoft from "../../../6_shared/ui/icons/microsoft.svg?react"
 import styles from "./LoginForm.module.css"
 import { ILoginForm } from "../model/types";
 
-
 import { useState, ChangeEvent } from "react";
 import { useAppDispatch, useAppSelector } from "../../../6_shared/lib/store";
-import { signInUser } from "../../../4_features/auth/login/loginThunk";
+import { signInUser } from "../../../5_entities/Session/model/sessionThunk";
 
 
 export function LoginForm({ className }: ILoginForm): JSX.Element {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const { status, error, user } = useAppSelector(state => state.auth);
+    const { status, error, user, role } = useAppSelector(state => state.session);
 
     // TODO: изменить тупую типизацию на умную e
 
@@ -34,24 +33,28 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
 
     function handleLogin() {
         dispatch(signInUser({ email, password }));
+        setEmail('');
+        setPassword('');
     }
+
     return (
         <section className={className ? className + ' ' + styles.mainContainer : styles.mainContainer}>
             <div className={styles.container}>
                 {status === 'loading' && <p>Loading...</p>}
                 {status === 'failed' && <p>Error: {error}</p>}
                 {user && <p>Welcome, {user.email}</p>}
+                {role && <p>Your role is {role}</p>}
                 <h1 className={styles.title}>Sign in to your account</h1>
                 <form className={styles.form} onSubmit={(e) => e.preventDefault()}> {/*TODO: убрать onSubmit в таком виде*/}
                     <div className={styles.inputContainer}>
-                        <label className={styles.inputLabel} htmlFor="username">Email</label>
+                        <label className={styles.inputLabel} htmlFor="email">Email</label>
                         <Input variant="auth"
-                            type="text"
+                            type="email"
                             value={email}
                             onChange={onChangeEmail}
-                            id="username"
-                            name="username or email ID"
-                            placeholder="Username or Email ID"
+                            id="email"
+                            name="email ID"
+                            placeholder="Email ID"
                         />
                     </div>
                     <div className={styles.inputContainer}>
