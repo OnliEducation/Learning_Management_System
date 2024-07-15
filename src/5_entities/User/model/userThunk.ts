@@ -1,7 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { IRegisterData, ThunkApiConfig } from "./types";
+import { IRegisterData } from "./types";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../../6_shared/api";
+import { ThunkApiConfig } from "../../../6_shared/types";
 
 export const createRegisterData = createAsyncThunk<IRegisterData, IRegisterData, ThunkApiConfig>(
     'user/createRegisterData',

@@ -1,5 +1,5 @@
 import { UserInfo } from "firebase/auth";
-import { Error, Role, Status } from "../../../6_shared/types/stateTypes";
+import { Error, Role, Status } from "../../../6_shared/types";
 
 interface IUser {
     email: UserInfo['email'],

@@ -1,4 +1,4 @@
-import { Error, Status } from "../../../6_shared/types/stateTypes";
+import { Error, Status } from "../../../6_shared/types";
 
 interface IPersonalData {
     firstName: string,
@@ -37,18 +37,12 @@ interface IUserState {
     profile: IProfileUser,
     courses: string[],
     mentors: string[],
-    reviews: string[],   
+    reviews: string[],
     status: Status,
-    error: Error, 
+    error: Error,
 }
-
-type ThunkApiConfig = {
-    state: RootState;
-    rejectValue: string;
-};
 
 export type {
     IUserState,
     IRegisterData,
-    ThunkApiConfig,
 }
