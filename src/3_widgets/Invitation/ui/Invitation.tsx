@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Invitation.module.css'
-import { Button } from '../../../6_shared/ui/components/Button';
+import { Button } from '../../../6_shared/ui/atoms/Button';
 import { IInvitation } from '../model/types';
 import Arrow from '../../../6_shared/ui/icons/arrow.svg?react'
 import ManImage from "../../../6_shared/ui/images/InvitationMan.png"

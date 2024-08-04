@@ -1,5 +1,5 @@
-import { Button } from "../../../6_shared/ui/components/Button";
-import { Input } from "../../../6_shared/ui/components/Input";
+import { Button } from "../../../6_shared/ui/atoms/Button";
+import { Input } from "../../../6_shared/ui/atoms/Input";
 import { Link } from "react-router-dom";
 import Arrow from "../../../6_shared/ui/icons/arrow.svg?react"
 import Facebook from "../../../6_shared/ui/icons/facebook.svg?react"

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Button } from '../../../6_shared/ui/components/Button';
+import { Button } from '../../../6_shared/ui/atoms/Button';
 
 import styles from "./Intro.module.css"
 import { IIntro } from '../model/types';

@@ -1,6 +1,31 @@
 @font-face {
-    font-family: 'Inter';
-    src: url('/public/fonts/InterVariableFont.woff2') format('woff2-variations');
-    font-weight: 100 900;
+    font-family: 'Fira Sans Condensed';
+    src: url('/public/fonts/FiraSansCondensed-Medium.woff2') format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url('/public/fonts/FiraSansCondensed-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('/public/fonts/FiraSans-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('/public/fonts/FiraCode-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
     font-display: swap;
 }

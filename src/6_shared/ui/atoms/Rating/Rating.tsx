@@ -5,8 +5,11 @@ import { IRating } from './types'
 
 const ratingStyles: ItemStyles = {
     itemShapes: ThinRoundedStar,
-    activeFillColor: '#EAB308', // wawarning/500
-    inactiveFillColor: '#CBD5E1', // grey/300
+    itemStrokeWidth: 3,
+    activeFillColor: '#fff',
+    activeStrokeColor: '#4958C6F5', // --light-vista-primary 
+    inactiveFillColor: '#fff',
+    inactiveStrokeColor: '#4958C6A3' // --light-vista-tertiary
 }
 
 export function Rating(props: IRating): JSX.Element {

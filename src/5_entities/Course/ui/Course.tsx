@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ICourse } from "../model/types"
-import { Rating } from '../../../6_shared/ui/components/Rating';
+import { Rating } from '../../../6_shared/ui/atoms/Rating';
 
 import styles from './Course.module.css'
 
