@@ -1,6 +1,6 @@
 import { ISignUp } from "../model/types";
-import { Input } from "../../../6_shared/ui/components/Input";
-import { Button } from "../../../6_shared/ui/components/Button";
+import { Input } from "../../../6_shared/ui/atoms/Input";
+import { Button } from "../../../6_shared/ui/atoms/Button";
 import { Link } from "react-router-dom";
 import Facebook from "../../../6_shared/ui/icons/facebook.svg?react"
 import Google from "../../../6_shared/ui/icons/google.svg?react"

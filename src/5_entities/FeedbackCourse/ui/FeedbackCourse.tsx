@@ -2,7 +2,7 @@ import { IFeedbackCourse } from "../model/types";
 import styles from "./FeedbackCourse.module.css";
 
 import Avatar from '../../../6_shared/ui/images/Customer.jpg'
-import { Rating } from "../../../6_shared/ui/components/Rating";
+import { Rating } from "../../../6_shared/ui/atoms/Rating";
 
 export function FeedbackCourse(props: IFeedbackCourse): JSX.Element {
     const {

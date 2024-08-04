@@ -1,22 +1,18 @@
 .default {
     display: flex;
-    gap: 6px;
-    padding: 10px 24px;
+    gap: 8px;
+    padding: 12px 24px;
     align-items: center;
     justify-content: center;
 
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 22.4px;
-    color: var(--color-white);
+    color: var(--dark-neutral-primary);
 
-    background-color: var(--primary-500);
-    border-radius: 8px;
+    background-color: var(--background-dark);
     border: none;
     cursor: pointer;
 }
 
-.dark {
+/* .dark {
     composes: default;
 
     background-color: var(--grey-text-dark);
@@ -29,4 +25,4 @@
 
     background-color: transparent;
     border: 1px solid var(--grey-text-dark);
-}
+} */

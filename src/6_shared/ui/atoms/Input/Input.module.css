@@ -1,0 +1,11 @@
+.default {
+    padding: 16px;
+
+    color: black;
+
+    border: 1px solid grey;
+}
+
+.default::placeholder {
+    color: grey;
+}

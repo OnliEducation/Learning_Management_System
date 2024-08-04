@@ -3,8 +3,8 @@ import CartIcon from '../../../6_shared/ui/icons/cart.svg?react';
 import LogoIcon from '../../../6_shared/ui/icons/logo.svg?react';
 
 import { IHeader } from "../model/types";
-import { Input } from "../../../6_shared/ui/components/Input";
 import styles from "./Header.module.css"
+import { SearchInput } from "../../../6_shared/ui/atoms/SearchInput";
 
 export function Header({ className }: IHeader): JSX.Element {
 
@@ -24,7 +24,7 @@ export function Header({ className }: IHeader): JSX.Element {
                     </li>
 
                     <li className={styles.searchInputContainer}>
-                        <Input className={styles.searchInput} />
+                        <SearchInput className={styles.searchInput} />
                     </li>
 
                     <li className={styles.navLink}>

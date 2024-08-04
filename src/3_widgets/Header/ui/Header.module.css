@@ -65,10 +65,10 @@
 .searchInput {
   width: 100%;
 
-  font-size: 14px;
+  /* font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  color: var(--grey-700);
+  color: var(--grey-700); */
 }
 
 .searchInputContainer::before {
@@ -79,7 +79,7 @@
   width: 20px;
   height: 20px;
 
-  background: url('src/shared/ui/icons/loupe.svg') no-repeat center center;
+  background: url('src/6_shared/ui/icons/loupe.svg') no-repeat center center;
   background-size: contain;
 }
 
