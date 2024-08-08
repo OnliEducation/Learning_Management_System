@@ -15,7 +15,7 @@ export function FormField(props: IFormField) {
     } = props;
 
     return (
-        <label className={className ? className + ' ' + styles.formField : styles.formField} >
+        <label className={className ? `${className} ${styles.formField}` : styles.formField} >
             <span className={variant}>{label}</span>
             <Input
                 type={type}

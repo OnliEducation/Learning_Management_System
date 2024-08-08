@@ -2,10 +2,10 @@ import { ISignUp } from "../model/types";
 import { Input } from "../../../6_shared/ui/atoms/Input";
 import { Button } from "../../../6_shared/ui/atoms/Button";
 import { Link } from "react-router-dom";
-import Facebook from "../../../6_shared/ui/icons/facebook.svg?react"
-import Google from "../../../6_shared/ui/icons/google.svg?react"
-import Microsoft from "../../../6_shared/ui/icons/microsoft.svg?react"
-import Arrow from "../../../6_shared/ui/icons/arrow.svg?react"
+// import Facebook from "../../../6_shared/ui/icons/facebook.svg?react"
+// import Google from "../../../6_shared/ui/icons/google.svg?react"
+// import Microsoft from "../../../6_shared/ui/icons/microsoft.svg?react"
+// import Arrow from "../../../6_shared/ui/icons/arrow.svg?react"
 import styles from "./SignUpForm.module.css"
 
 import { useAppDispatch } from "../../../6_shared/lib/store";
@@ -79,7 +79,7 @@ export function SignUpForm({ className }: ISignUp): JSX.Element {
 
                     <Button className={styles.button} variant='dark' type="submit" onClick={() => handleSignUp()}>
                         <span>Create Account</span>
-                        <Arrow />
+                        {/* <Arrow /> */}
                     </Button>
                 </form>
 
@@ -87,17 +87,17 @@ export function SignUpForm({ className }: ISignUp): JSX.Element {
                     <p className={styles.divider}>Sign up with</p>
                     <div className={styles.socialsContainer}>
                         <Link className={styles.social} to={"https://www.facebook.com/"}>
-                            <Facebook />
+                            {/* <Facebook /> */}
                             <span className={styles.facebookText}>Facebook</span>
                         </Link>
 
                         <Link className={styles.social} to={"https://www.google.com/"}>
-                            <Google />
+                            {/* <Google /> */}
                             <span className={styles.googleText}>Google</span>
                         </Link>
 
                         <Link className={styles.social} to={"https://www.microsoft.com/"}>
-                            <Microsoft />
+                            {/* <Microsoft /> */}
                             <span className={styles.microsoftText}>Microsoft</span>
                         </Link>
                     </div>

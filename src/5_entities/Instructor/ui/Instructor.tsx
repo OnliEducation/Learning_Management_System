@@ -1,5 +1,5 @@
 import { IInstructor } from "../model/types";
-import Star from "../../../6_shared/ui/icons/star.svg?react"
+// import Star from "../../../6_shared/ui/icons/star.svg?react"
 import styles from "./Instructor.module.css"
 
 export function Instructor(props: IInstructor): JSX.Element {
@@ -21,7 +21,7 @@ export function Instructor(props: IInstructor): JSX.Element {
             </div>
             <div className={styles.otherInfo}>
                 <span className={styles.groupRating}>
-                    <Star className={styles.icon} />
+                    {/* <Star className={styles.icon} /> */}
                     <span className={styles.rating}>
                         {rating}
                     </span>
