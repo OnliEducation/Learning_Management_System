@@ -1,0 +1,16 @@
+.cardsContainer {
+    display: grid;
+    gap: 16px;
+}
+
+.columns2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.columns3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.columns4 {
+    grid-template-columns: repeat(4, 1fr);
+}

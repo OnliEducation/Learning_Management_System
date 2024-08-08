@@ -1,0 +1,13 @@
+.carouselContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carouselContainer::-webkit-scrollbar {
+    display: none;
+}

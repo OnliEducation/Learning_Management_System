@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.equal .column {
+    flex: 1;
+}
+
+.single .column {
+    flex: 1;
+}
+
+.largeLeft .left {
+    flex: 2;
+}
+
+.largeLeft .right {
+    flex: 1;
+}
+
+.largeRight .left {
+    flex: 1;
+}
+
+.largeRight .right {
+    flex: 2;
+}
