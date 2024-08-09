@@ -16,7 +16,7 @@ export function Button(props: IButton): JSX.Element {
         <button
             type={type}
             onClick={onClick}
-            className={className ? `${className} ${buttonVariant} md` : `${buttonVariant} md`}
+            className={`${className ? className : ''} ${buttonVariant} md`}
         >
             {children}
         </ button>

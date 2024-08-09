@@ -5,7 +5,7 @@ import styles from './CarouselLayout.module.css';
 export function CarouselLayout(props: ICarousel): JSX.Element {
     const {className, children} = props;
     return (
-        <div className={className ? `${className} ${styles.carouselContainer}` : styles.carouselContainer}>
+        <div className={`${className ? className : ''} ${styles.container}`}>
             {children}
         </div>
     );

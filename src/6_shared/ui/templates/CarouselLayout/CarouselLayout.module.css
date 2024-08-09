@@ -1,4 +1,4 @@
-.carouselContainer {
+.container {
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -8,6 +8,6 @@
     -ms-overflow-style: none;
 }
 
-.carouselContainer::-webkit-scrollbar {
+.container::-webkit-scrollbar {
     display: none;
 }

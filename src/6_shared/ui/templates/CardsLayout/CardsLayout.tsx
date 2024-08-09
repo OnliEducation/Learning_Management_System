@@ -11,7 +11,7 @@ export function CardsLayout(props: ICardsLayout) {
 
     const columnClass = `columns${columns}`;
     const isValidColumnClass = columnClass in styles;
-    const containerClass = `${styles.cardsContainer} ${isValidColumnClass ? styles[columnClass] : ''} ${className ? className : ''}`;
+    const containerClass = `${className ? className : ''} ${isValidColumnClass ? styles[columnClass] : ''} ${styles.container}`;
 
     return (
         <div className={containerClass}>
