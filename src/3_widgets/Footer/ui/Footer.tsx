@@ -1,11 +1,11 @@
 import { IFooter } from "../model/types";
 import styles from "./Footer.module.css"
 import Logo from "../../../6_shared/ui/icons/logo.svg?react"
-import GitHub from "../../../6_shared/ui/icons/github.svg?react"
-import Facebook from "../../../6_shared/ui/icons/facebook.svg?react"
-import Google from "../../../6_shared/ui/icons/google.svg?react"
-import Twitter from "../../../6_shared/ui/icons/twitter.svg?react"
-import Microsoft from "../../../6_shared/ui/icons/microsoft.svg?react"
+// import GitHub from "../../../6_shared/ui/icons/github.svg?react"
+// import Facebook from "../../../6_shared/ui/icons/facebook.svg?react"
+// import Google from "../../../6_shared/ui/icons/google.svg?react"
+// import Twitter from "../../../6_shared/ui/icons/twitter.svg?react"
+// import Microsoft from "../../../6_shared/ui/icons/microsoft.svg?react"
 
 export function Footer({ className }: IFooter): JSX.Element {
     return (
@@ -68,7 +68,7 @@ export function Footer({ className }: IFooter): JSX.Element {
                     <li>
                         <a href="https://github.com/OnliEducation/Learning_Management_System">
                             <span className={styles.cirle}>
-                                <Facebook className={styles.icon} />
+                                {/* <Facebook className={styles.icon} /> */}
                             </span>
 
                             <span className="visually-hidden">Our facebook.</span>
@@ -77,7 +77,7 @@ export function Footer({ className }: IFooter): JSX.Element {
                     <li>
                         <a href="https://github.com/OnliEducation/Learning_Management_System">
                             <span className={styles.cirle}>
-                                <GitHub className={styles.icon} />
+                                {/* <GitHub className={styles.icon} /> */}
                             </span>
                             <span className="visually-hidden">Our github.</span>
                         </a>
@@ -85,7 +85,7 @@ export function Footer({ className }: IFooter): JSX.Element {
                     <li>
                         <a href="https://github.com/OnliEducation/Learning_Management_System">
                             <span className={styles.cirle}>
-                                <Google className={styles.icon} />
+                                {/* <Google className={styles.icon} /> */}
                             </span>
                             <span className="visually-hidden">Our google.</span>
                         </a>
@@ -93,7 +93,7 @@ export function Footer({ className }: IFooter): JSX.Element {
                     <li>
                         <a href="https://github.com/OnliEducation/Learning_Management_System">
                             <span className={styles.cirle}>
-                                <Twitter className={styles.icon} />
+                                {/* <Twitter className={styles.icon} /> */}
                             </span>
                             <span className="visually-hidden">Our twitter.</span>
                         </a>
@@ -101,7 +101,7 @@ export function Footer({ className }: IFooter): JSX.Element {
                     <li>
                         <a href="https://github.com/OnliEducation/Learning_Management_System">
                             <span className={styles.cirle}>
-                                <Microsoft className={styles.icon} />
+                                {/* <Microsoft className={styles.icon} /> */}
                             </span>
                             <span className="visually-hidden">Our microsoft.</span>
                         </a>

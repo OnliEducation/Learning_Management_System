@@ -26,7 +26,7 @@ export function Input(props: IInput): JSX.Element {
         <input
             id={id}
             name={name}
-            className={className ? className + ' ' + styles.default + ' ' + 'p' : styles.default + ' ' + 'p'}
+            className={`${className ? className : ''} ${styles.default} p`}
             type={type}
             value={value ?? inputData}
             placeholder={placeholder}

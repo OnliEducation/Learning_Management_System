@@ -10,7 +10,7 @@ export function ColumnLayout(props: IColumnLayout) {
     } = props;
 
     return (
-        <div className={className ? `${className} ${styles.container} ${styles[variant]}` : `${styles.container} ${styles[variant]}`}>
+        <div className={`${className ? className : ''} ${styles.container} ${styles[variant]}`}>
             <div className={`${styles.column} ${styles.left}`}>{leftContent}</div>
             {variant !== 'single' && (
                 <div className={`${styles.column} ${styles.right}`}>{rightContent}</div>

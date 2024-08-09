@@ -26,7 +26,7 @@ export function SearchInput(props: ISearchInput): JSX.Element {
         <input
             id={id}
             name={name}
-            className={className ? className + ' ' + styles.input + ' ' + 'sm' : styles.input + ' ' + 'sm'}
+            className={`${className ? className : ''} ${styles.input} sm`}
             type={type}
             value={value ?? inputData}
             placeholder={placeholder}

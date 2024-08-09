@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './Invitation.module.css'
 import { Button } from '../../../6_shared/ui/atoms/Button';
 import { IInvitation } from '../model/types';
-import Arrow from '../../../6_shared/ui/icons/arrow.svg?react'
+// import Arrow from '../../../6_shared/ui/icons/arrow.svg?react'
 import ManImage from "../../../6_shared/ui/images/InvitationMan.png"
 import WomanImage from "../../../6_shared/ui/images/InvitationWoman.png"
 
@@ -18,7 +18,7 @@ export function Invitation({ className }: IInvitation): JSX.Element {
                         <Link to={'/sign-up'} className={styles.buttonLink}>
                             <Button variant='dark'>
                                 Start Your Instructor Journey
-                                <Arrow />
+                                {/* <Arrow /> */}
                             </Button>
                         </Link>
                     </div>
@@ -31,7 +31,7 @@ export function Invitation({ className }: IInvitation): JSX.Element {
                         <Link to={'/sign-up'} className={styles.buttonLink} >
                             <Button variant='dark'>
                                 Checkout Courses
-                                <Arrow />
+                                {/* <Arrow /> */}
                             </Button>
                         </Link>
                     </div>

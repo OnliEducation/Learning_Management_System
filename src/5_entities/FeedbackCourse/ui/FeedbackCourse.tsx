@@ -1,7 +1,7 @@
 import { IFeedbackCourse } from "../model/types";
 import styles from "./FeedbackCourse.module.css";
 
-import Avatar from '../../../6_shared/ui/images/Customer.jpg'
+// import Avatar from '../../../6_shared/ui/images/Customer.jpg'
 import { Rating } from "../../../6_shared/ui/atoms/Rating";
 
 export function FeedbackCourse(props: IFeedbackCourse): JSX.Element {
@@ -15,7 +15,7 @@ export function FeedbackCourse(props: IFeedbackCourse): JSX.Element {
         <div className={styles.container}>
             <div className={styles.infoAuthor}>
                 <span className={styles.avatar}>
-                    <img src={Avatar} alt={`${user.firstName} avatar`} />
+                    {/* <img src={Avatar} alt={`${user.firstName} avatar`} /> */}
                 </span>
                 <span className={styles.author}>{user.firstName + ' ' + user.lastName}</span>
             </div>

@@ -1,4 +1,4 @@
-.cardsContainer {
+.container {
     display: grid;
     gap: 16px;
 }
