@@ -1,5 +1,6 @@
 import { LearnerReviews } from "../../3_widgets/LearnerReviews";
 import { useAppSelector } from "../../6_shared/lib/store";
+import { Icon } from "../../6_shared/ui/atoms/Icon";
 import { SearchInput } from "../../6_shared/ui/atoms/SearchInput";
 import { FormField } from "../../6_shared/ui/molecules/FormField";
 import { CardsLayout } from "../../6_shared/ui/templates/CardsLayout";
@@ -170,6 +171,9 @@ export function TestPage(): JSX.Element {
                     <button>тык</button>
                 </div>
             </CarouselLayout>
+            <Icon 
+            name="arrow"
+            size={24}/>
         </>
     )
 }
