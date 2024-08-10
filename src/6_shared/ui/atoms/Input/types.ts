@@ -1,3 +1,6 @@
-import {InputHTMLAttributes} from 'react'
+import { InputHTMLAttributes } from 'react'
 
-export type IInput = InputHTMLAttributes<HTMLInputElement> 
+export interface IInput extends InputHTMLAttributes<HTMLInputElement> {
+    /** Styles option for input. */
+    variant: 'default' | 'search';
+}

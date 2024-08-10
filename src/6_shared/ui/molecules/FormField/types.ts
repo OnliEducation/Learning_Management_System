@@ -1,10 +1,5 @@
-export interface IFormField {
-    className?: string,
-    variant: 'sm' | 'md',
+import { IInput } from '../../atoms/Input/types';
+export interface IFormField extends IInput {
+    /** Text for label. */
     label: string,
-    type: string,
-    name: string,
-    required: boolean,
-    value?: string,
-    onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined,
 }

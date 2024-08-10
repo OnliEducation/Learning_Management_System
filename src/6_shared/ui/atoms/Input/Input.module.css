@@ -3,9 +3,24 @@
 
     color: black;
 
-    border: 1px solid grey;
+    border: 1px solid var(--dark-neutral-primary);
+    background-color: inherit;    
 }
 
-.default::placeholder {
-    color: grey;
+.default::placeholder {    
+    color: var(--light-neutral-tertiary);
+}
+
+.search {
+    padding: 14px;
+    padding-left: 40px;
+
+    color: var(--dark-neutral-primary);
+
+    border: 1px solid var(--dark-neutral-primary);
+    background-color: inherit;  
+}
+
+.search::placeholder {
+    color: var(--dark-neutral-primary);
 }

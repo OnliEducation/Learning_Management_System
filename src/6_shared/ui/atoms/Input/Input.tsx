@@ -1,10 +1,11 @@
 import { ChangeEvent, useState } from 'react'
-import styles from './Input.module.css'
 import { IInput } from './types'
+
+import styles from './Input.module.css'
 
 export function Input(props: IInput): JSX.Element {
     const {
-        id,
+        variant = 'default',
         type = 'text',
         name,
         value,
@@ -12,7 +13,6 @@ export function Input(props: IInput): JSX.Element {
         onBlur,
         onFocus,
         placeholder,
-        className,
         required,
     } = props
 
@@ -22,11 +22,12 @@ export function Input(props: IInput): JSX.Element {
         setInputData(e.target.value)
     }
 
+    const classInput =  variant === 'default' ? `${styles.default} p` : `${styles.search} sm`;
+
     return (
         <input
-            id={id}
             name={name}
-            className={`${className ? className : ''} ${styles.default} p`}
+            className={`${classInput}`}
             type={type}
             value={value ?? inputData}
             placeholder={placeholder}
