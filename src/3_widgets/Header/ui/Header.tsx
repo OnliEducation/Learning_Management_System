@@ -4,7 +4,7 @@ import LogoIcon from '../../../6_shared/ui/icons/logo.svg?react';
 
 import { IHeader } from "../model/types";
 import styles from "./Header.module.css"
-import { SearchInput } from "../../../6_shared/ui/atoms/SearchInput";
+import { Input } from "../../../6_shared/ui/atoms/Input";
 
 export function Header({ className }: IHeader): JSX.Element {
 
@@ -24,7 +24,8 @@ export function Header({ className }: IHeader): JSX.Element {
                     </li>
 
                     <li className={styles.searchInputContainer}>
-                        <SearchInput className={styles.searchInput} />
+                        <Input className={styles.searchInput} 
+                        variant="search"/>
                     </li>
 
                     <li className={styles.navLink}>
