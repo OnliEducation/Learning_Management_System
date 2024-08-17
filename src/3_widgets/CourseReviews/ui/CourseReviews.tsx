@@ -1,19 +1,19 @@
 import { Review } from "../../../5_entities/Review/ui/Review";
-import { CardsLayout } from "../../../6_shared/ui/templates/CardsLayout";
-import { ILearnerReviews } from "../model/types";
-import styles from './LearnerReviews.module.css'
+import { ColumnLayout } from "../../../6_shared/ui/templates/ColumnLayout";
+import { ICourseReviews } from "../model/types";
+import styles from './CourseReviews.module.css'
 
-export function LearnerReviews(props: ILearnerReviews): JSX.Element {
+export function CourseReviews(props: ICourseReviews): JSX.Element {
     const { items, className } = props;
 
     if (!items) {
-        return <div className={className}>No feedback available</div>;
+        return <div className={className}>No course reviews available</div>;
     }
 
     return (
         <section className={className ? className : ''}>
-            <h2 className={styles.heading}>Learner reviews</h2>
-            <CardsLayout className={styles.cards} columns={2}>
+            <h2 className={styles.heading}>Course reviews</h2>
+            <ColumnLayout className={styles.cards} variant="single" leftContent=
                 {items.map((item) => (
                     <li className={styles.cardItem} key={item.user.id}>
                         <Review
@@ -25,7 +25,8 @@ export function LearnerReviews(props: ILearnerReviews): JSX.Element {
                         />
                     </li>
                 ))}
-            </CardsLayout>
+            >
+            </ColumnLayout>
         </section>
     );
 }

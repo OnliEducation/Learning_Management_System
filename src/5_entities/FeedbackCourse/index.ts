@@ -1,1 +1,0 @@
-export { feedbackCourseSliceReducer } from "./model/FeedbackCourseSlice";

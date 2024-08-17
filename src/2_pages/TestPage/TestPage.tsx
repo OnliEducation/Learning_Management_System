@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { LearnerReviews } from "../../3_widgets/LearnerReviews";
-import { useAppSelector } from "../../6_shared/lib/store";
+// import { TopCategories } from "../../3_widgets/TopCategories";
+import { useAppDispatch, useAppSelector } from "../../6_shared/lib/store";
 import { Button } from "../../6_shared/ui/atoms/Button";
 import { Icon } from "../../6_shared/ui/atoms/Icon";
 import { Input } from "../../6_shared/ui/atoms/Input";
@@ -9,20 +11,34 @@ import { CardsLayout } from "../../6_shared/ui/templates/CardsLayout";
 import { CarouselLayout } from "../../6_shared/ui/templates/CarouselLayout";
 import { ColumnLayout } from "../../6_shared/ui/templates/ColumnLayout";
 import styles from "./TestPage.module.css"
+// import { ShoppingCart } from "../../3_widgets/ShoppingCart/ui/shoppingCart";
+import { fetchCourses } from "../../5_entities/Course";
+import { fetchCategories } from "../../5_entities/Category";
+// import { TopCourses } from "../../3_widgets/TopCourses";
+import { fetchReviews } from "../../5_entities/Review";
+import { CourseReviews } from "../../3_widgets/CourseReviews";
+
 
 export function TestPage(): JSX.Element {
-    const items = useAppSelector((state) => state.feedbackCourse.feedbacks);
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        dispatch(fetchCategories());
+        dispatch(fetchCourses());
+        dispatch(fetchReviews());
+    }, [dispatch]);
+
+    const reviewItems = useAppSelector((state) => state.review.reviews);
+    // const courseItems = useAppSelector((state) => state.course.courses);
+    // const categoriesItems = useAppSelector((state) => state.category.categories);
 
     return (
         <>
-            <LearnerReviews className={styles.container} items={items} />
-            {/* <FormField
-                label='Имя'
-                name=''
-                required={true}
-                variant="sm"
-                type="text"
-            /> */}
+            <CourseReviews className={styles.container} items={reviewItems} />
+            <LearnerReviews className={styles.container} items={reviewItems} />
+            {/* <ShoppingCart className={styles.container} items={courseItems} /> */}
+            {/* <TopCourses className={styles.container} items={courseItems}/> */}
+            {/* <TopCategories className={styles.container} items={categoriesItems} /> */}
+
             <div>
                 <h2>Equal Columns</h2>
                 <ColumnLayout

@@ -1,39 +1,35 @@
 import { Link } from "react-router-dom";
-import { Course } from "../../../5_entities/Course";
-
-import styles from './topCourses.module.css'
 import { ITopCourses } from "../model/types";
+import { CourseCardCompact } from "../../../5_entities/Course";
+import styles from './TopCourses.module.css'
+import { Icon } from "../../../6_shared/ui/atoms/Icon";
+import { CardsLayout } from "../../../6_shared/ui/templates/CardsLayout";
 
 export function TopCourses(props: ITopCourses): JSX.Element {
-    const { className, courseData } = props
+    const { className, items } = props
 
     return (
         <section className={className ? className : ''}>
             <header className={styles.header}>
-                <h2 className={styles.title}>Top Courses</h2>
-                <Link className={styles.linkAll} to="/courses-page">
+                <h2 className='h1'>Top Courses</h2>
+                <Link className={`${styles.linkAll} md`} to="/courses-page">
                     See All
+                    <Icon className={styles.icon} name='chevron' size={24} />
                 </Link>
             </header>
-
-            <ul className={styles.coursesContainer}>
-                {courseData?.map((item) => (
-                    <li key={item.title}>
-                        <Course
-                            link={item.link}
-                            image={item.image}
+            <CardsLayout className={styles.cards} columns={4}>
+                {items?.map((item) => (
+                    <li className={styles.cardItem}  key={item.id}>
+                        <CourseCardCompact
+                            id={item.id}                 // TODO: спросить у Антона
+                            cover={item.cover}
                             title={item.title}
                             author={item.author}
-                            ratingStars={item.ratingStars}
-                            ratingCount={item.ratingCount}
                             price={item.price}
-                            hoursCount={item.hoursCount}
-                            lecturesCount={item.lecturesCount}
-                            difficulty={item.difficulty}
                         />
                     </li>
                 ))}
-            </ul>
+            </CardsLayout>
         </section>
     );
 }

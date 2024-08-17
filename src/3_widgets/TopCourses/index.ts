@@ -1,2 +1,1 @@
-export { TopCourses } from './ui/topCourses';
-export { topCoursesData } from './data';
+export { TopCourses } from './ui/TopCourses';
