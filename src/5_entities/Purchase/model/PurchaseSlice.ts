@@ -3,11 +3,11 @@ import {
     PayloadAction,
     createSlice
 } from "@reduxjs/toolkit";
-import { IUserState } from "./types";
-import { fetchUsers } from "./userThunk";
+import { PurchaseState } from "./types";
+import { fetchPurchases } from "./PurchaseThunk";
 
-const initialState: IUserState = {
-    users: null,
+const initialState: PurchaseState = {
+    purchases: null,
     status: 'idle',
     error: null,
 };
@@ -16,19 +16,19 @@ function isError(action: Action) {
     return action.type.endsWith('rejected');
 }
 
-const userSlice = createSlice({
-    name: 'user',
+const purchaseSlice = createSlice({
+    name: 'purchase',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchUsers.pending, (state) => {
+            .addCase(fetchPurchases.pending, (state) => {
                 state.status = 'loading';
                 state.error = null;
             })
-            .addCase(fetchUsers.fulfilled, (state, action) => {
-                state.users = action.payload;
+            .addCase(fetchPurchases.fulfilled, (state, action) => {
                 state.status = 'succeeded';
+                state.purchases = action.payload;
             })
             .addMatcher(isError, (state, action: PayloadAction<string>) => {
                 state.status = 'failed';
@@ -37,4 +37,4 @@ const userSlice = createSlice({
     },
 });
 
-export const userReducer = userSlice.reducer;
+export const purchaseSliceReducer = purchaseSlice.reducer;

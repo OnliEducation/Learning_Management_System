@@ -1,48 +1,22 @@
-import { Error, Status } from "../../../6_shared/types";
+import { Error, IUser, Status } from "../../../6_shared/types";
 
-interface IPersonalData {
-    firstName: string,
-    lastName: string,
-    userName: string,
-    description: string,
-    language: string,
-}
-
-interface IRegisterData {
-    firstName: IPersonalData['firstName'],
-    lastName: IPersonalData['lastName'],
-    userName: IPersonalData['userName'],
-}
-
-interface IAvatar {
-    image: string,
-    imageTitle: string,
-}
-
-interface ILinks {
-    website: string,
-    twitter: string,
-    linkedin: string,
-    youtube: string,
-    facebook: string,
-}
-
-interface IProfileUser {
-    personalData: IPersonalData,
-    avatar: IAvatar,
-    links: ILinks,
+interface IUserCardCompact {
+    id: IUser['id'];
+    name: IUser['name'];
+    cover: IUser['cover'];
+    headline: IUser['headline'];
 }
 
 interface IUserState {
-    profile: IProfileUser,
-    courses: string[],
-    mentors: string[],
-    reviews: string[],
-    status: Status,
-    error: Error,
+    /** A list of users. */
+    readonly users: IUser[] | null;
+    /** Indicator of the data loading state. */
+    readonly status: Status;
+    /** The error message, if any, encountered during data processing. */
+    readonly error: Error;
 }
 
 export type {
+    IUserCardCompact,
     IUserState,
-    IRegisterData,
 }

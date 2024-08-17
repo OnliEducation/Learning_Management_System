@@ -1,0 +1,42 @@
+.container {
+    padding: 16px;
+
+    border: 1px solid var(--light-kelp-tertiary);
+    background-color: var(--surface-light);
+}
+
+.avatar {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top;
+}
+
+.author {
+    margin-bottom: 8px;
+    
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28.8px;
+    text-align: center;
+    color: var(--light-kelp-primary);
+}
+
+.profession {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: var(--light-neutral-secondary);
+}
