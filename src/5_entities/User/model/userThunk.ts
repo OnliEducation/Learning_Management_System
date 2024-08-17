@@ -1,55 +1,22 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { IRegisterData } from "./types";
-import { doc, setDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../../6_shared/api";
-import { ThunkApiConfig } from "../../../6_shared/types";
+import { IUser } from "../../../6_shared/types";
 
-export const createRegisterData = createAsyncThunk<IRegisterData, IRegisterData, ThunkApiConfig>(
-    'user/createRegisterData',
-    async ({ firstName, lastName, userName }, { rejectWithValue, getState }) => {
-        const state = getState();
-        const user = state.session.user;
-
-        if (!user) {
-            return rejectWithValue('User is not logged in');
-        }
-
-        const userId = user.id;
-        const userDocRef = doc(db, "users", userId);
-        const docData = {
-            profile: {
-                personalData: {
-                    firstName,
-                    lastName,
-                    userName,
-                    description: '',
-                    language: '',
-                },
-                avatar: {
-                    image: '',
-                    imageTitle: '',
-                },
-                links: {
-                    website: '',
-                    twitter: '',
-                    linkedin: '',
-                    youtube: '',
-                    facebook: '',
-                },
-            },
-            courses: ['example1',],
-            mentors: ['example1',],
-            reviews: ['example1',],
-        }
+export const fetchUsers = createAsyncThunk<IUser[], undefined, { rejectValue: string }>(
+    'user/fetchUsers',
+    async (_, { rejectWithValue }) => {
         try {
-            await setDoc(userDocRef, docData);
-            return {
-                firstName,
-                lastName,
-                userName,
-            }
-        } catch (error) {
-            return rejectWithValue('Failed to put data in Redux');
+            const usersCollection = collection(db, "users");
+            const usersSnapshot = await getDocs(usersCollection);
+
+            console.log(usersSnapshot);
+
+            const users: IUser[] = usersSnapshot.docs.map(doc => ({...doc.data(), id: doc.id}) as IUser);            
+            return users;            
+        }
+        catch (error) {
+            return rejectWithValue("Error fetching users: ");
         }
     }
 );

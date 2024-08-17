@@ -1,4 +1,5 @@
 import { LearnerReviews } from "../../3_widgets/LearnerReviews";
+import { UserCardCompact } from "../../5_entities/User/ui/UserCardCompact";
 import { useAppSelector } from "../../6_shared/lib/store";
 import { Button } from "../../6_shared/ui/atoms/Button";
 import { Icon } from "../../6_shared/ui/atoms/Icon";
@@ -9,20 +10,43 @@ import { CardsLayout } from "../../6_shared/ui/templates/CardsLayout";
 import { CarouselLayout } from "../../6_shared/ui/templates/CarouselLayout";
 import { ColumnLayout } from "../../6_shared/ui/templates/ColumnLayout";
 import styles from "./TestPage.module.css"
+import Mentor from '../../6_shared/ui/images/Mentor.png'
 
 export function TestPage(): JSX.Element {
     const items = useAppSelector((state) => state.feedbackCourse.feedbacks);
 
     return (
         <>
+            <CardsLayout
+            className={styles.container}
+            columns={4}>
+                <UserCardCompact
+                    id='1'
+                    name='Ronald Jason'
+                    cover={Mentor}
+                    headline='UI/UX Designer'
+                />
+                <UserCardCompact
+                    id='2'
+                    name='Jon Richards'
+                    cover={Mentor}
+                    headline='UI/UX Designer'
+                />
+                <UserCardCompact
+                    id='3'
+                    name='May Richards'
+                    cover={Mentor}
+                    headline='UI/UX Designer'
+                />
+                <UserCardCompact
+                    id='4'
+                    name='Gilbert Richards'
+                    cover={Mentor}
+                    headline='UI/UX Designer'
+                />
+
+            </CardsLayout>
             <LearnerReviews className={styles.container} items={items} />
-            {/* <FormField
-                label='Имя'
-                name=''
-                required={true}
-                variant="sm"
-                type="text"
-            /> */}
             <div>
                 <h2>Equal Columns</h2>
                 <ColumnLayout
