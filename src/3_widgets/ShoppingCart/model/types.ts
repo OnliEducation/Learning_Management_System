@@ -1,6 +1,5 @@
 import { ICourseCard } from "../../../5_entities/Course/model/types";
-
-export interface ITopCourses {
-    readonly className?: string;
+export interface IShoppingCart {
+    readonly className?: string
     readonly items: ICourseCard[] | null;
 }

@@ -3,11 +3,11 @@ import {
     PayloadAction,
     createSlice
 } from "@reduxjs/toolkit";
-import { IFeedbackCourseState } from "./types";
-import { fetchFeedbackCourse } from "./FeedbackCourseThunk";
+import { CategoryState } from "./types";
+import { fetchCategories } from "./CategoryThunk";
 
-const initialState: IFeedbackCourseState = {
-    feedbacks: null,
+const initialState: CategoryState = {
+    categories: null,
     status: 'idle',
     error: null,
 };
@@ -16,19 +16,19 @@ function isError(action: Action) {
     return action.type.endsWith('rejected');
 }
 
-const feedbackCourseSlice = createSlice({
-    name: 'feedbackCourse',
+const categorySlice = createSlice({
+    name: 'category',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchFeedbackCourse.pending, (state) => {
+            .addCase(fetchCategories.pending, (state) => {
                 state.status = 'loading';
                 state.error = null;
             })
-            .addCase(fetchFeedbackCourse.fulfilled, (state, action) => {
+            .addCase(fetchCategories.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.feedbacks = action.payload;
+                state.categories = action.payload;
             })
             .addMatcher(isError, (state, action: PayloadAction<string>) => {
                 state.status = 'failed';
@@ -37,4 +37,4 @@ const feedbackCourseSlice = createSlice({
     },
 });
 
-export const feedbackCourseSliceReducer = feedbackCourseSlice.reducer;
+export const categorySliceReducer = categorySlice.reducer;

@@ -1,12 +1,19 @@
-export interface ICourse {
-   readonly link: string;
-   readonly image: string;
+import { Error, ICourse, Status } from "../../../6_shared/types";
+interface ICourseCard {
+   readonly id: string;
+   readonly cover: string;
    readonly title: string;
-   readonly author: string;
-   readonly ratingStars: number;
-   readonly ratingCount: number;
+   readonly author: string;      
    readonly price: number;
-   readonly hoursCount: number;
-   readonly lecturesCount: number;
-   readonly difficulty: string;
+}
+
+interface CourseState {
+   courses: ICourse[] | null,
+   status: Status,
+   error: Error,
+}
+
+export type {
+   ICourseCard,
+   CourseState,
 }

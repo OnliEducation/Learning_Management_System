@@ -1,3 +1,18 @@
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.cardItem {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: calc(25% - 40px);
+    min-width: 0;
+}
+
+
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -6,25 +21,19 @@
     margin-bottom: 24px;
 }
 
-.title {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33.6px;
-}
-
 .linkAll {
-    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
     min-height: 48px;
 
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 22.4px;
-    color: var(--primary-500);
+    color: var(--dark-neutral-primary);
+    background-color: var(--background-dark);
 
     cursor: pointer;
 }
 
-.coursesContainer {
-    display: flex;
-    justify-content: space-between;
+.icon {
+    transform: rotate(180deg);
 }

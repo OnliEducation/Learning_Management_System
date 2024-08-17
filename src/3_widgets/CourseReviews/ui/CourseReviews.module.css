@@ -6,12 +6,16 @@
     line-height: 38.4px;
 }
 
-.cards {
-    gap: 40px;
+.cards > div { /* узнать у Антона как сделать  */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .cardItem {
     display: flex;
     flex-grow: 1;
+
     min-width: 0;
+    min-height: 238px;
 }
