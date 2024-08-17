@@ -1,5 +1,14 @@
-export type Role = 'user' | 'viewer' | 'mentor';
+/** Possible roles that a user can have in the system. */
+type Role = 'user' | 'viewer';
 
-export type Status = 'idle' | 'loading' | 'succeeded' | 'failed';
+/** Status of an asynchronous operation. */
+type Status = 'idle' | 'loading' | 'succeeded' | 'failed';
 
-export type Error = string | null;
+/** Error message, if any. */
+type Error = string | null;
+
+export type {
+    Role,
+    Status,
+    Error,
+}

@@ -1,16 +1,13 @@
 import { Button } from "../../../6_shared/ui/atoms/Button";
 import { Input } from "../../../6_shared/ui/atoms/Input";
-import { Link } from "react-router-dom";
-// import Arrow from "../../../6_shared/ui/icons/arrow.svg?react"
-// import Facebook from "../../../6_shared/ui/icons/facebook.svg?react"
-// import Google from "../../../6_shared/ui/icons/google.svg?react"
-// import Microsoft from "../../../6_shared/ui/icons/microsoft.svg?react"
+// import { Link } from "react-router-dom";
 import styles from "./LoginForm.module.css"
 import { ILoginForm } from "../model/types";
 
 import { useState, ChangeEvent } from "react";
 import { useAppDispatch, useAppSelector } from "../../../6_shared/lib/store";
-import { signInUser } from "../../../5_entities/Session/model/sessionThunk";
+import { fetchCurrentUser } from "../../../5_entities/CurrentUser";
+import { signInUser } from "../../../5_entities/Session";
 
 
 export function LoginForm({ className }: ILoginForm): JSX.Element {
@@ -33,6 +30,7 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
 
     function handleLogin() {
         dispatch(signInUser({ email, password }));
+        dispatch(fetchCurrentUser())
         setEmail('');
         setPassword('');
     }
@@ -48,7 +46,7 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                 <form className={styles.form} onSubmit={(e) => e.preventDefault()}> {/*TODO: убрать onSubmit в таком виде*/}
                     <div className={styles.inputContainer}>
                         <label className={styles.inputLabel} htmlFor="email">Email</label>
-                        <Input variant="auth"
+                        <Input variant='default'
                             type="email"
                             value={email}
                             onChange={onChangeEmail}
@@ -59,7 +57,7 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                     </div>
                     <div className={styles.inputContainer}>
                         <label className={styles.inputLabel} htmlFor="password">Password</label>
-                        <Input variant="auth"
+                        <Input variant='default'
                             type="password"
                             value={password}
                             onChange={onChangePassword}
@@ -76,22 +74,6 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                     </div>
                 </form>
                 <p className={styles.divider}>Sign in with</p>
-                <div className={styles.socialsContainer}>
-                    <Link className={styles.social} to={"https://www.facebook.com/"}>
-                        {/* <Facebook /> */}
-                        <span className={styles.facebookText}>Facebook</span>
-                    </Link>
-
-                    <Link className={styles.social} to={"https://www.google.com/"}>
-                        {/* <Google /> */}
-                        <span className={styles.googleText}>Google</span>
-                    </Link>
-
-                    <Link className={styles.social} to={"https://www.microsoft.com/"}>
-                        {/* <Microsoft /> */}
-                        <span className={styles.microsoftText}>Microsoft</span>
-                    </Link>
-                </div>
             </div>
 
             <div className={styles.image}>

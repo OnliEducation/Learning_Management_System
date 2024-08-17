@@ -1,25 +1,30 @@
-import { UserInfo } from "firebase/auth";
-import { Error, Role, Status } from "../../../6_shared/types";
-
-interface IUser {
-    email: UserInfo['email'],
-    id: UserInfo['uid'],
-}
+import { Error, ISession, Role, Status } from "../../../6_shared/types";
 
 interface ISessionState {
-    user: IUser | null;
+    /** Data of the current user. */
+    user: ISession | null;
+    /** Indicator of the data loading state. */
     status: Status;
+    /** The error message, if any, encountered during data processing. */
     error: Error;
+    /** The role assigned to the user, defining their access level or permissions in the system. */
     role: Role,
 }
 
-interface IUserInfoLogin {
+interface ISessionLogin {
+    email: string;
+    password: string;
+}
+
+interface ISessionSignUp {
+    name: string,
     email: string;
     password: string;
 }
 
 export type {
+    ISession,
     ISessionState,
-    IUser,
-    IUserInfoLogin,
+    ISessionLogin,
+    ISessionSignUp
 }
