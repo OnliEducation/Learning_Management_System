@@ -2,43 +2,28 @@
     display: flex;
     justify-content: space-between;
 
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 22.4px;
-    color: var(--grey-300);
-
-    background-color: var(--grey-800);
-}
-
-.title,
-.logoWrapper {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 28.8px;
-    color: var(--grey-100);
+    color: var(--dark-neutral-secondary);
+    background-color: var(--surface-dark);
 }
 
 .description {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    min-height: 40px;
     max-width: 416px;
 }
 
 .logoWrapper {
     display: flex;
-    gap: 14px;
+    align-items: center;
+    gap: 8px;
 }
 
-.help .title,
-.programs .title,
-.contact .title {
+.title {
     margin-bottom: 8px;
 }
 
-.help .list,
-.programs .list {
+.list {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -77,28 +62,4 @@
 .descriptionDetails a {
     text-decoration: none;
     color: inherit;
-}
-
-.social {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-right: 13px;
-}
-
-.cirle {
-    position: relative;
-
-    display: block;
-    width: 40px;
-    height: 40px;
-
-    border-radius: 50%;
-    background-color: var(--color-white);
-}
-
-.icon {
-    position: absolute;
-    top: 8px;
-    left: 8px;
 }

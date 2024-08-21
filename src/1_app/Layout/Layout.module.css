@@ -1,3 +1,9 @@
+.page {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    min-height: 100vh;
+}
+
 .container {
     padding-left: calc(50% - 640px);
     padding-right: calc(50% - 640px);
@@ -7,5 +13,5 @@
     composes: container;
 
     padding-top: 80px;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
 }

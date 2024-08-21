@@ -1,3 +1,4 @@
+import { ICourse } from "./course";
 import { IUser } from "./user";
 
 export interface IPurchase {
@@ -6,7 +7,7 @@ export interface IPurchase {
     /** The unique identifier of the user associated with the purchase. */
     readonly user: IUser['id'];
     /** The list of course identifiers included in the purchase. */
-    readonly courses: Array<string>; // Array<Course['id']
+    readonly courses: Array<ICourse['id']>;
     /** The date when the purchase was created. */
     readonly createdAt: Date;
 }

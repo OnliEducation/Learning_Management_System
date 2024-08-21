@@ -1,127 +1,44 @@
-.mainContainer {
-    display: flex;
-    gap: 42px;
+.columnContainer {
+    gap: 40px
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 690px;
-    padding-top: 213px;
-}
-
-.title {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 41.6px;
-    text-align: center;
-
-    color: var(--grey-900);
+.formWrapper {
+    padding-top: 141px;
+    max-width: 620px;
 }
 
 .form {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 24px;
 }
 
-.inputContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.formField {
+    text-align: left;
 }
 
-.inputLabel {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 28.8px;
-
-    color: var(--grey-900);
+.icon {
+    transform: rotate(180deg);
 }
 
-.buttonText {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 22.4px;
+.button:hover {
+    opacity: 0.7;
 }
 
-.divider {
-    display: flex;
-    align-items: center;
+.imgContainer {
+    display: block;
+    width: 700px;
+    height: 630px;
 
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-
-    color: var(--grey-disable);
+    overflow: hidden;
 }
 
-.divider::before,
-.divider::after {
-    content: "";
+.img {
+    width: 100%;
+    height: 100%;
 
-    flex-grow: 1;
-    height: 1px;
-
-    background-color: var(--grey-disable);
-}
-
-.divider::before {
-    margin-right: 14px;
-}
-
-.divider::after {
-    margin-left: 14px;
-}
-
-.socialsContainer {
-    display: flex;
-    gap: 15px;
-}
-
-.social {
-    width: 220px;
-    display: flex;
-    gap: 6px;
-    padding: 10px 24px;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-
-    border: 1px solid var(--grey-disable);
-    border-radius: 8px;
-
-    cursor: pointer;
-}
-
-.facebookText,
-.googleText,
-.microsoftText {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-}
-
-.facebookText {
-    color: #0866FF;
-}
-
-.googleText {
-    color: #EA4335;
-}
-
-.microsoftText {
-    color: var(--color-black);
-}
-
-.image {
-    min-width: 628px;
-    max-width: 628px;
-    height: 959px;
-
-    background-image: url('src/6_shared/ui/images/LoginGirl.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
 }

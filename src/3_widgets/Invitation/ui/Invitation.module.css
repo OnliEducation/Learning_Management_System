@@ -1,43 +1,43 @@
-.list {
+.container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+
+    gap: 40px;
 }
 
-.invitation {
-    display: flex;
-    justify-content: space-between;
+.column {
+    gap: 40px;
+    
     align-items: center;
+} 
+
+.image {
+    height: 400px;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    width: 549px;
 }
 
 .title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    color: var(--color-black);
+    margin-bottom: 16px;
 }
 
 .description {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
 
-    color: var(--grey-800);
+    color: var(--light-neutral-secondary);
 }
 
-.image {
-    width: 400px;
+.link {
+    align-self: flex-start;
 }
 
 .men {
     width: 471.5px;
 }
 
-.buttonLink {
-    display: inline-block;
+.icon {
+    transform: rotate(180deg);
 }

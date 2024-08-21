@@ -1,0 +1,33 @@
+.default {
+    display: flex;
+    gap: 8px;
+    padding: 12px 24px;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--dark-neutral-primary);
+
+    background-color: var(--background-dark);
+    border: none;
+    cursor: pointer;
+}
+
+.green {
+    composes: default;
+
+    color: var(--light-neutral-primary);
+    background-color: var(--dark-kelp-primary);
+}
+
+.purple {
+    composes: default;
+
+    color: var(--light-neutral-primary);
+    background-color: var(--dark-vista-primary);
+}
+
+.salt {
+    composes: default;
+
+    background-color: var(--light-salt-primary);
+}

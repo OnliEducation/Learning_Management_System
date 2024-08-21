@@ -1,16 +1,19 @@
+import { ICourse } from "./course";
+import { IUser } from "./user";
+
 interface IUserReviewUI {
-    id: string;
-    firstName: string;
-    lastName: string;
-    avatar: string;
+    id: IUser['id'];
+    name: IUser['name'];
+    cover: IUser['cover'];
 }
 
 interface IReview {
     id: string;
-    user: IUserReviewUI;           
+    user: IUserReviewUI;
+    course: ICourse['id'];
     rating: number;
-    content: string;
-    createdAt: string;      //Date
+    content: Date;
+    createdAt: Date;
 }
 
 export type {
