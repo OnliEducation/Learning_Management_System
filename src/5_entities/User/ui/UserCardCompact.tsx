@@ -12,8 +12,8 @@ export function UserCardCompact(props: IUserCardCompact): JSX.Element {
             <span className={styles.avatar}>
                 <img src={cover} alt={`${cover} avatar`} />
             </span>
-            <p className={styles.author}>{name}</p>
-            <p className={styles.profession}>{headline}</p>
+            <p className={`${styles.author} md`}>{name}</p>
+            <p className={`${styles.profession} sm`}>{headline}</p>
         </div>
     )
 }

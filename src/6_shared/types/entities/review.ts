@@ -13,7 +13,7 @@ interface IReview {
     course: ICourse["id"];
     rating: number;
     content: string;
-    createdAt: string;      //Date
+    createdAt: string;
 }
 
 export type {

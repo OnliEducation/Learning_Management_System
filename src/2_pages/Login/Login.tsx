@@ -4,6 +4,6 @@ import styles from "./Login.module.css"
 
 export function Login() {
     return (
-        <LoginForm className={styles.container} />
+        <LoginForm className={styles.form} />
     )
 }

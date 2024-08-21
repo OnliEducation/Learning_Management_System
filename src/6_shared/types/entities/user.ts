@@ -1,4 +1,6 @@
+import { ICourse } from "./course";
 import { IPurchase } from "./purchase";
+import { IReview } from "./review";
 
 export interface IUser {
     /** The unique identifier of the user entity. */
@@ -16,9 +18,9 @@ export interface IUser {
     /** A list of social media links associated with the user. */
     readonly socials: string[];
     /** A list of course identifiers that the user is associated with. */
-    readonly courses: Array<string>;                                                 // courses: Array<Course['id']>
+    readonly courses: Array<ICourse['id']>;
     /** A list of review identifiers written by the user. */
-    readonly reviews: Array<string>;                                                 // reviews: Array<Review['id']>
+    readonly reviews: Array<IReview['id']>;
     /** A list of purchase identifiers made by the user. */
     readonly purchases: Array<IPurchase['id']>;
 }

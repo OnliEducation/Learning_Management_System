@@ -2,3 +2,10 @@
     padding-left: calc(50% - 640px);
     padding-right: calc(50% - 640px);
 }
+
+.form {
+    composes: container;
+
+    padding-right: 0;
+    min-width: 1440px;
+}

@@ -3,34 +3,35 @@ import styles from "./Advantages.module.css"
 
 export function Advantages({ className }: IAdvantages): JSX.Element {
     return (
-        <section className={className ? styles.container + ' ' + className : styles.container}>
+        <section className={`${className ? className : ''} ${styles.container}`}>
+            <h2 className="visually-hidden">Advantages</h2>
             <ul className={styles.list}>
                 <li className={styles.advantage}>
-                    <span className={styles.count}>250+</span>
-                    <h2 className={styles.description}>
+                    <span className='h2'>250+</span>
+                    <span className='sm'>
                         Courses by our best mentors
-                    </h2>
+                    </span>
                 </li>
 
                 <li className={styles.advantage}>
-                    <span className={styles.count}>1000+</span>
-                    <h2 className={styles.description}>
+                    <span className='h2'>1000+</span>
+                    <span className='sm'>
                         Courses by our best mentors
-                    </h2>
+                    </span>
                 </li>
 
                 <li className={styles.advantage}>
-                    <span className={styles.count}>15+</span>
-                    <h2 className={styles.description}>
+                    <span className='h2'>15+</span>
+                    <span className='sm'>
                         Courses by our best mentors
-                    </h2>
+                    </span>
                 </li>
 
                 <li className={styles.advantage}>
-                    <span className={styles.count}>2400+</span>
-                    <h2 className={styles.description}>
+                    <span className='h2'>2400+</span>
+                    <span className='sm'>
                         Courses by our best mentors
-                    </h2>
+                    </span>
                 </li>
             </ul>
         </section>

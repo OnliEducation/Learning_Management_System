@@ -14,6 +14,7 @@ export function Input(props: IInput): JSX.Element {
         onFocus,
         placeholder,
         required,
+        className,
     } = props
 
     const [inputData, setInputData] = useState<string>('')
@@ -27,7 +28,7 @@ export function Input(props: IInput): JSX.Element {
     return (
         <input
             name={name}
-            className={`${classInput}`}
+            className={`${classInput} ${className ? className : ''}`}
             type={type}
             value={value ?? inputData}
             placeholder={placeholder}

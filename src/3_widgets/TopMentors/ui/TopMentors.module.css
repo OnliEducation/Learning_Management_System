@@ -1,0 +1,23 @@
+.content {
+    display: block;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.link {
+    color: var(--dark-neutral-primary);
+}
+
+.icon {
+    transform: rotate(180deg);
+}
+
+.content .cards {
+    gap: 40px;
+}

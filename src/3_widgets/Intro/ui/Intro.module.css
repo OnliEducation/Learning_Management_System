@@ -4,31 +4,32 @@
     align-items: center;
 }
 
-.image {
-    width: 512px;
-    padding-right: 51.5px;
-}
-
 .content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    width: 592px;
+    max-width: 592px;
 }
 
 .title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    color: var(--grey-900);
+    max-width: 480px;
+    margin-bottom: 16px;
 }
 
 .description {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
 
-    color: var(--grey-700);
+    color: var(--light-neutral-secondary);
 }
 
 .link {
-    display: inline-block;
+    max-width: 314px;
+}
+
+.icon {
+    transform: rotate(180deg);
+}
+
+.image {
+    width: 512px;
+    padding-right: 51.5px;
 }

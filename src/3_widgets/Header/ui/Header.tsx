@@ -1,57 +1,51 @@
 import { Link } from "react-router-dom";
-import CartIcon from '../../../6_shared/ui/icons/cart.svg?react';
-import LogoIcon from '../../../6_shared/ui/icons/logo.svg?react';
-
 import { IHeader } from "../model/types";
-import styles from "./Header.module.css"
 import { Input } from "../../../6_shared/ui/atoms/Input";
+import { Icon } from "../../../6_shared/ui/atoms/Icon";
+import { LinkComponent } from "../../../6_shared/ui/atoms/LinkComponent";
+
+import styles from "./Header.module.css"
 
 export function Header({ className }: IHeader): JSX.Element {
 
     return (
-        <header className={className ? className : ''}>
+        <header className={`${className ? className : ''} ${styles.header}`}>
             <nav className={styles.nav}>
-                <Link className={styles.linkLogo} to={'/'}>
-                    <LogoIcon className={styles.logo} />
-                    <span className={styles.textLogo}>Byway</span>
-                </Link>
-
                 <ul className={styles.siteList}>
-                    <li className={styles.navCategory}>
-                        <Link to={'/categories'}>
+                    <li>
+                        <Link className={styles.linkLogo} to={'/'}>
+                            <Icon name="logo" size={40} />
+                        </Link>
+                    </li>
+                    <li >
+                        <Link className={`${styles.navCategory} md`} to={'/categories'}>
                             Categories
                         </Link>
                     </li>
 
                     <li className={styles.searchInputContainer}>
-                        <Input className={styles.searchInput} 
-                        variant="search"/>
-                    </li>
-
-                    <li className={styles.navLink}>
-                        <Link to={'/categories'}>
-                            Teach on Byway
-                        </Link>
+                        <Icon className={styles.loupe} name="loupe" size={20} />
+                        <Input className={styles.searchInput} variant="search" placeholder="Search courses" />
                     </li>
                 </ul>
 
                 <ul className={styles.userList}>
                     <li className={styles.cart}>
                         <Link className={styles.cartLink} to={'/checkout'}>
-                            <CartIcon />
+                            <Icon name="cart" size={24} />
                         </Link>
                     </li>
 
                     <li className={styles.login}>
-                        <Link className={styles.loginLink} to={'/login'}>
+                        <LinkComponent variant={'green'} className={`${styles.authLink} md`} to={'/login'}>
                             Log In
-                        </Link>
+                        </LinkComponent>
                     </li>
 
-                    <li className={styles.signup}>
-                        <Link className={styles.signupLink} to={'/sign-up'}>
+                    <li>
+                        <LinkComponent variant={'purple'} className={`${styles.authLink} md`} to={'/sign-up'}>
                             Sign Up
-                        </Link>
+                        </LinkComponent>
                     </li>
                 </ul>
             </nav>
