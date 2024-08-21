@@ -34,10 +34,10 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                 leftContent={
                     <div className={styles.formWrapper}>
                         {/* {status === 'loading' && <p>Loading...</p>}
-                {status === 'failed' && <p>Error: {error}</p>}
-                {user && <p>Welcome, {user.email}</p>}
-                {role && <p>Your role is {role}</p>} */}
-                        <h1 className='h1'>Sign in to your account</h1>
+                        {status === 'failed' && <p>Error: {error}</p>}
+                        {user && <p>Welcome, {user.email}</p>}
+                        {role && <p>Your role is {role}</p>} */}
+                        <h1 className={`${styles.title} h1`}>Sign in to your account</h1>
                         <form className={styles.form} onSubmit={(e) => e.preventDefault()}> {/*TODO: убрать onSubmit в таком виде*/}
                             <FormField
                                 className={styles.formField}

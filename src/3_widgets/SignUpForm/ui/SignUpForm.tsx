@@ -37,7 +37,7 @@ export function SignUpForm({ className }: ISignUp): JSX.Element {
                 }
                 rightContent={
                     <div className={styles.formWrapper}>
-                        <h1 className='h1'>Create Your Account</h1>
+                        <h1 className={`${styles.title} h1`}>Create Your Account</h1>
                         <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
                             <FormField
                                 className={styles.formField}

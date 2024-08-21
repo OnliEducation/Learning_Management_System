@@ -4,4 +4,5 @@ export function TestPage(): JSX.Element {
         <>
             <h2>Test Page</h2>
         </>
+    )
 }
