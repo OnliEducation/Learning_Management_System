@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { IReview } from "./types";
+
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../../6_shared/api";
-import { IUserReviewUI } from "../../../6_shared/types";
+import { IReview, IUserReviewUI } from "../../../6_shared/types";
 
 export const fetchReviews = createAsyncThunk<IReview[], undefined, { rejectValue: string }>(
     'review/fetchReviews',
@@ -25,18 +25,18 @@ export const fetchReviews = createAsyncThunk<IReview[], undefined, { rejectValue
                 const data = doc.data();
                 usersMap[doc.id] = {
                     id: doc.id,
-                    firstName: data.profile.personalData.firstName,
-                    lastName: data.profile.personalData.lastName,
-                    avatar: data.profile.avatar.image
+                    name: data.name,
+                    cover: data.cover,
                 };
             });
 
             const reviews: IReview[] = reviewsFirestore.map(review => ({
                 id: review.id,
+                course: review.course,
                 user: usersMap[review.user],
                 content: review.content,
                 rating: review.rating,
-                createdAt: review.createdAt,
+                createdAt: review.createdAt.toDate().toISOString(),
             }));
 
             return reviews;

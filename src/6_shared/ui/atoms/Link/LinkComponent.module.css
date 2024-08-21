@@ -19,11 +19,22 @@
     opacity: 0.9;
 }
 
-.transparent {
+.green {
     composes: default;
 
     color: var(--light-neutral-primary);
+    background-color: var(--dark-kelp-primary);
+}
 
-    background-color: transparent;
-    border: 1px solid var(--background-dark);
+.purple {
+    composes: default;
+
+    color: var(--light-neutral-primary);
+    background-color: var(--dark-vista-primary);
+}
+
+.salt {
+    composes: default;
+
+    background-color: var(--light-salt-primary);
 }

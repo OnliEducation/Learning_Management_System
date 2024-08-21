@@ -19,7 +19,7 @@ export function CourseCardLarge(props: ICourseCard): JSX.Element {
                     <Link to={"#"} >
                         <h3 className={`${styles.courseTitle} lg`}>{title}</h3>
                     </Link>
-                    <p className={`${styles.courseAuthor} md`}>By {author}</p>
+                    <p className={`${styles.courseAuthor} md`}>By {author.name}</p>
                 </div>
 
                 <div className={styles.cardFooter}>

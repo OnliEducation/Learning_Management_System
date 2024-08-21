@@ -1,37 +1,18 @@
-.cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 40px;
-}
-
-.cardItem {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: calc(25% - 40px);
-    min-width: 0;
-}
-
-
 .header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
-.linkAll {
+.cards {
+    gap: 40px;
+}
+
+.cardItem {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    min-height: 48px;
-
-    color: var(--dark-neutral-primary);
-    background-color: var(--background-dark);
-
-    cursor: pointer;
+    overflow: hidden;
 }
 
 .icon {

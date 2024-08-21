@@ -19,6 +19,7 @@ export function LearnerReviews(props: ILearnerReviews): JSX.Element {
                         <Review
                             id={item.id}
                             user={item.user}
+                            course={item.course}
                             rating={item.rating}
                             content={item.content}
                             createdAt={item.createdAt}
