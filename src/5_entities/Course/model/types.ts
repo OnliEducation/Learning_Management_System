@@ -1,10 +1,12 @@
-import { Error, ICourse, Status } from "../../../6_shared/types";
+import { Error, ICourse, ICourseUserUI, Status } from "../../../6_shared/types";
+
+
 interface ICourseCard {
-   readonly id: string;
-   readonly cover: string;
-   readonly title: string;
-   readonly author: string;      
-   readonly price: number;
+   readonly id: string
+   readonly cover: string
+   readonly title: string
+   readonly author: ICourseUserUI
+   readonly price: number
 }
 
 interface CourseState {

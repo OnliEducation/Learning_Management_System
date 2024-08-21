@@ -1,1 +1,1 @@
-export { TopCourses } from './ui/TopCourses';
+export { TopCourses } from "./ui/TopCourses";

@@ -1,2 +1,1 @@
-export { TopCategories } from './ui/shoppingCart';
-export { topCategoriesData } from './data';
+export { ShoppingCart } from "./ui/ShoppingCart";

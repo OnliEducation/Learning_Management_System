@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
+import styles from './TopCategories.module.css';
 import { CategoryCardCompact } from '../../../5_entities/Category';
 import { ITopCategories } from '../model/types';
 import { CardsLayout } from '../../../6_shared/ui/templates/CardsLayout';
-import styles from './topCategories.module.css';
 import { Icon } from '../../../6_shared/ui/atoms/Icon';
+import { LinkComponent } from '../../../6_shared/ui/atoms/Link';
 
 export function TopCategories(props: ITopCategories): JSX.Element {
   const { items, className } = props;
@@ -16,16 +16,17 @@ export function TopCategories(props: ITopCategories): JSX.Element {
     <section className={className ? className : ''}>
       <header className={styles.header}>
         <h2 className='h1'>Top Categories</h2>
-        <Link className={`${styles.linkAll} md`} to="/categories-page">
+        <LinkComponent to="/categories-page">
           See All
           <Icon className={styles.icon} name='chevron' size={24} />
-        </Link>
+        </LinkComponent>
       </header>
       <CardsLayout className={styles.cards} columns={4}>
         {items?.map((item) => (
           <li className={styles.cardItem} key={item.id}>
             <CategoryCardCompact
-              id={item.id}                           // TODO:спросить у антона 
+              id={item.id}                 // TODO:спросить у антона           
+              cover={item.cover}
               label={item.label}
               courses={item.courses}
             />
