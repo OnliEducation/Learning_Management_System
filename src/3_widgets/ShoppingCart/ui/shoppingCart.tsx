@@ -1,5 +1,5 @@
+import styles from './ShoppingCart.module.css';
 import { IShoppingCart } from '../model/types';
-import styles from './shoppingCart.module.css';
 import { ColumnLayout } from '../../../6_shared/ui/templates/ColumnLayout';
 import { CourseCardLarge } from '../../../5_entities/Course';
 

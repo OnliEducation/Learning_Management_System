@@ -2,6 +2,7 @@ import { Error, ICategory, ICourse, Status } from "../../../6_shared/types"
 interface ICategoryCardCompact {
   id: string,
   label: string,
+  cover: string,
   courses: Array<ICourse["id"]>,
 }
 

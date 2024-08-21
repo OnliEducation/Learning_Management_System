@@ -1,8 +1,9 @@
 import { IReview } from "../model/types";
 import styles from "./Review.module.css";
 
-import Avatar from '../../../6_shared/ui/images/Mentor.png'
+// import Avatar from '../../../6_shared/ui/images/Mentor.png'
 import { Rating } from "../../../6_shared/ui/atoms/Rating";
+import { formatDate } from "../../../6_shared/lib/helpers/transformDate";
 
 export function Review(props: IReview): JSX.Element {
     const {
@@ -15,9 +16,9 @@ export function Review(props: IReview): JSX.Element {
         <div className={styles.review}>
             <div className={styles.infoAuthor}>
                 <span className={styles.avatarContainer}>
-                    <img src={Avatar} alt={`${user.firstName} avatar`} />
+                    <img src={user.cover} alt={`${user.name} avatar`} />
                 </span>
-                <span className={`${styles.author} lg`}>{user.firstName + ' ' + user.lastName}</span>
+                <span className={`${styles.author} lg`}>{user.name}</span>
             </div>
 
             <div className={styles.feedback}>
@@ -25,7 +26,9 @@ export function Review(props: IReview): JSX.Element {
 
                 <div className={styles.footer}>
                     <Rating value={rating} className={styles.rating} />
-                    <span className={`${styles.date} md`}>{createdAt}</span>
+                    <span className={`${styles.date} md`}>
+                        {formatDate(createdAt)}
+                    </span>
                 </div>
             </div>
         </div>

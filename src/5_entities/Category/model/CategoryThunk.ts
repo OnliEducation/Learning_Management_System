@@ -10,10 +10,9 @@ export const fetchCategories = createAsyncThunk<ICategory[], undefined, { reject
         try {
             const categoriesCollection = collection(db, "categories");
             const categoriesSnapshot = await getDocs(categoriesCollection);
-
             console.log(categoriesSnapshot);
 
-            const categories: ICategory[] = categoriesSnapshot.docs.map(doc => doc.data() as ICategory);            
+            const categories: ICategory[] = categoriesSnapshot.docs.map(doc => ({...doc.data(), id: doc.id}) as ICategory);            
             return categories;            
         }
         catch (error) {

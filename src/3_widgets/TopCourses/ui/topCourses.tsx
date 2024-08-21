@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import styles from './TopCourses.module.css'
 import { ITopCourses } from "../model/types";
 import { CourseCardCompact } from "../../../5_entities/Course";
-import styles from './TopCourses.module.css'
 import { Icon } from "../../../6_shared/ui/atoms/Icon";
 import { CardsLayout } from "../../../6_shared/ui/templates/CardsLayout";
+import { LinkComponent } from "../../../6_shared/ui/atoms/Link";
 
 export function TopCourses(props: ITopCourses): JSX.Element {
     const { className, items } = props
@@ -12,14 +12,14 @@ export function TopCourses(props: ITopCourses): JSX.Element {
         <section className={className ? className : ''}>
             <header className={styles.header}>
                 <h2 className='h1'>Top Courses</h2>
-                <Link className={`${styles.linkAll} md`} to="/courses-page">
+                <LinkComponent to="/courses-page">
                     See All
                     <Icon className={styles.icon} name='chevron' size={24} />
-                </Link>
+                </LinkComponent>
             </header>
             <CardsLayout className={styles.cards} columns={4}>
                 {items?.map((item) => (
-                    <li className={styles.cardItem}  key={item.id}>
+                    <li className={styles.cardItem} key={item.id}>
                         <CourseCardCompact
                             id={item.id}                 // TODO: спросить у Антона
                             cover={item.cover}
