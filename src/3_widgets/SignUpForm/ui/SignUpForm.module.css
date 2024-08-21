@@ -26,6 +26,10 @@
     text-align: center;
 }
 
+.title {
+    margin-bottom: 24px;
+}
+
 .form {
     display: flex;
     flex-wrap: wrap;

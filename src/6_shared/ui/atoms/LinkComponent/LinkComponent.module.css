@@ -10,6 +10,13 @@
     background-color: var(--background-dark);
     border: none;
     cursor: pointer;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.default:hover {
+    transform: scale(1.04);
+    opacity: 0.9;
 }
 
 .green {

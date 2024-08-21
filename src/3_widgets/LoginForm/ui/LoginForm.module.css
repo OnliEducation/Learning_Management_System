@@ -7,6 +7,10 @@
     max-width: 620px;
 }
 
+.title {
+    margin-bottom: 24px;
+}
+
 .form {
     display: flex;
     flex-wrap: wrap;

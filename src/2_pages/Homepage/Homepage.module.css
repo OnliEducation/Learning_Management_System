@@ -1,13 +1,14 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 .container {
     padding-left: calc(50% - 640px);
     padding-right: calc(50% - 640px);
-}
-
-.intro {
-    composes: container;
-
-    padding-top: 40px;
-    padding-bottom: 40px;
 }
 
 .advantages {
@@ -15,40 +16,4 @@
 
     padding-top: 40px;
     padding-bottom: 40px;
-    margin-bottom: 40px;
-}
-
-.topCategories {
-    composes: container;
-
-    margin-bottom: 40px;
-}
-
-.topCourses {
-    composes: container;
-
-    margin-bottom: 40px;
-}
-
-
-.topMentors {
-    composes: container;
-
-    margin-bottom: 40px;
-}
-
-
-.feedBackList {
-    composes: container;
-
-    padding-top: 80px;
-    padding-right: 0;
-    padding-bottom: 44px;
-    margin-bottom: 40px;
-}
-
-.invitation {
-    composes: container;
-
-    margin-bottom: 40px;
 }

@@ -80,11 +80,6 @@
   margin-right: 24px;
 }
 
-.authLink {
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease, border 0.3s ease;
-}
-
-.authLink:hover,
 .cartLink:hover,
 .linkLogo:hover {
   transform: scale(1.05);

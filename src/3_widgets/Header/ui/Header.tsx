@@ -37,13 +37,13 @@ export function Header({ className }: IHeader): JSX.Element {
                     </li>
 
                     <li className={styles.login}>
-                        <LinkComponent variant={'green'} className={`${styles.authLink} md`} to={'/login'}>
+                        <LinkComponent variant={'green'} to={'/login'}>
                             Log In
                         </LinkComponent>
                     </li>
 
                     <li>
-                        <LinkComponent variant={'purple'} className={`${styles.authLink} md`} to={'/sign-up'}>
+                        <LinkComponent variant={'purple'} to={'/sign-up'}>
                             Sign Up
                         </LinkComponent>
                     </li>
