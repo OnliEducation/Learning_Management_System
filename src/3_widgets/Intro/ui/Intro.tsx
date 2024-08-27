@@ -1,7 +1,6 @@
 import IntroImage from "../../../6_shared/ui/images/Intro.png"
 import { LinkComponent } from '../../../6_shared/ui/atoms/LinkComponent';
 import { Icon } from "../../../6_shared/ui/atoms/Icon";
-
 import { IIntro } from '../model/types';
 import styles from "./Intro.module.css"
 
