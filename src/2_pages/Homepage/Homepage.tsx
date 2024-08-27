@@ -1,10 +1,10 @@
 import styles from "./Homepage.module.css"
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../6_shared/lib/store";
-import { fetchUsers, selectPopularMentors } from "../../5_entities/User";
+import { fetchUsers, selectTopMentors } from "../../5_entities/User";
 import { fetchReviews } from '../../5_entities/Review';
-import { fetchCourses, selectPopularCourses } from '../../5_entities/Course';
-import { fetchCategories, selectPopularCategories } from '../../5_entities/Category';
+import { fetchCourses, selectTopCourses } from '../../5_entities/Course';
+import { fetchCategories, selectTopCategories } from '../../5_entities/Category';
 
 import { Advantages } from "../../3_widgets/Advantages";
 import { Intro } from "../../3_widgets/Intro";
@@ -22,17 +22,17 @@ export function Homepage() {
         dispatch(fetchReviews());
     }, [dispatch]);
 
-    const popularMentors = useAppSelector(selectPopularMentors).slice(0, 4);
-    const popularCategories = useAppSelector(selectPopularCategories).slice(0, 4);
-    const popularCourses = useAppSelector(selectPopularCourses).slice(0, 4);
+    const topMentors = useAppSelector(selectTopMentors).slice(0,4);
+    const topCategories = useAppSelector(selectTopCategories).slice(0,4);
+    const topCourses = useAppSelector(selectTopCourses).slice(0,4);
 
     return (
         <div className={styles.page}>
             <Intro className={styles.container} />
             <Advantages className={styles.advantages} />
-            <TopCategories className={styles.container} items={popularCategories} />
-            <TopCourses className={styles.container} items={popularCourses} />
-            <TopMentors className={styles.container} items={popularMentors} />
+            <TopCategories className={styles.container} items={topCategories} />
+            <TopCourses className={styles.container} items={topCourses} />
+            <TopMentors className={styles.container} items={topMentors} />
             <Invitation className={styles.container} />
         </div>
     )

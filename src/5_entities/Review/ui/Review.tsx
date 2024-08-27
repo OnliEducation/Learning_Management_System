@@ -1,7 +1,5 @@
 import { IReview } from "../model/types";
 import styles from "./Review.module.css";
-
-// import Avatar from '../../../6_shared/ui/images/Mentor.png'
 import { Rating } from "../../../6_shared/ui/atoms/Rating";
 import { formatDate } from "../../../6_shared/lib/helpers/transformDate";
 

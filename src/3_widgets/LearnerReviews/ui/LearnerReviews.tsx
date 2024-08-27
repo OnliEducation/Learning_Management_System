@@ -19,7 +19,7 @@ export function LearnerReviews(props: ILearnerReviews): JSX.Element {
                         <Review
                             id={item.id}
                             user={item.user}
-                            course={item.course}
+                            course={item.course} // TODO: ненужное поле для ui Review. Нужен новый интерфейс?
                             rating={item.rating}
                             content={item.content}
                             createdAt={item.createdAt}

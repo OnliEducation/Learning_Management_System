@@ -3,7 +3,7 @@ import { ITopCourses } from "../model/types";
 import { CourseCardCompact } from "../../../5_entities/Course";
 import { Icon } from "../../../6_shared/ui/atoms/Icon";
 import { CardsLayout } from "../../../6_shared/ui/templates/CardsLayout";
-import { LinkComponent } from "../../../6_shared/ui/atoms/Link";
+import { LinkComponent } from '../../../6_shared/ui/atoms/LinkComponent';
 
 export function TopCourses(props: ITopCourses): JSX.Element {
     const { className, items } = props
