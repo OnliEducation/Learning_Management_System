@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux'
-import {store} from '../store'
+import { store } from '../store'
+
 
 interface IProviders {
     /** Content that will be wrapped by providers. */

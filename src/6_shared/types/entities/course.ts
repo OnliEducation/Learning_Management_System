@@ -14,7 +14,7 @@ export interface ICourseUserUI {
 export interface ICourse {
     readonly id: string
     readonly title: string
-    readonly description: string
+    readonly description: Array<string>
     readonly cover: string
     readonly price: number
     readonly articles: Array<IArticle["id"]>
