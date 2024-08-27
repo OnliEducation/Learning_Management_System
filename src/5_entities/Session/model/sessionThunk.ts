@@ -1,6 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import { ISession, ISessionLogin, ISessionSignUp } from './types';
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { ISessionLogin, ISessionSignUp } from './types';
+import { ISession } from '../../../6_shared/types';
 
 export const signUpUser = createAsyncThunk<ISession, ISessionSignUp, { rejectValue: string }>(
     'session/signUpUser',
@@ -27,12 +28,31 @@ export const signInUser = createAsyncThunk<{ id: ISession['id'] }, ISessionLogin
         const auth = getAuth();
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            console.log(`You are user ${userCredential.user.email}`);
+
+            const user = {
+                id: userCredential.user.uid,
+                email: userCredential.user.email,
+            };
+
+            console.log(`You are user ${user.email}`);
             return {
                 id: userCredential.user.uid,
             }
         } catch (error) {
             return rejectWithValue('Failed to sign in');
+        }
+    }
+);
+
+export const signOutUser = createAsyncThunk<null, void, { rejectValue: string }>(
+    'session/signOutUser',
+    async (_, { rejectWithValue }) => {
+        const auth = getAuth();
+        try {
+            await signOut(auth);
+            return null;
+        } catch (error) {
+            return rejectWithValue('Failed to sign out');
         }
     }
 );

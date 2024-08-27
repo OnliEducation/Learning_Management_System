@@ -16,7 +16,15 @@
 
 .default:hover {
     transform: scale(1.04);
-    opacity: 0.9;
+    opacity: 0.95;
+}
+
+.default:active {
+    transform: scale(1);
+}
+
+.default:focus-visible {
+    outline: 2px solid var(--dark-kelp-primary); /* Толщина, стиль и цвет обводки */
 }
 
 .transparent {
@@ -26,4 +34,8 @@
 
     background-color: transparent;
     border: 1px solid var(--background-dark);
+}
+
+.transparent:focus-visible {
+    outline: auto;
 }

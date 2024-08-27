@@ -46,6 +46,7 @@ export function SignUpForm({ className }: ISignUp): JSX.Element {
                                 placeholder="Name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
+                                required
                             />
                             <FormField
                                 className={styles.formField}
@@ -54,6 +55,7 @@ export function SignUpForm({ className }: ISignUp): JSX.Element {
                                 placeholder="Email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                required
                             />
                             <FormField
                                 className={styles.formField}
@@ -62,6 +64,7 @@ export function SignUpForm({ className }: ISignUp): JSX.Element {
                                 placeholder="Enter Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                required
                             />
                             <Button className={styles.button} type="submit" onClick={() => handleSignUp()}>
                                 <span>Create Account</span>

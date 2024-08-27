@@ -19,7 +19,13 @@ function isError(action: Action) {
 const currentUserSlice = createSlice({
     name: 'currentUser',
     initialState,
-    reducers: {},
+    reducers: {
+        cleanCurrentUser: (state) => {
+            state.currentUser = null;
+            state.status = 'idle';
+            state.error = null;
+        },
+    },
     extraReducers: (builder) => {
         builder
             .addCase(createUser.pending, (state) => {
@@ -45,4 +51,5 @@ const currentUserSlice = createSlice({
     },
 });
 
+export const { cleanCurrentUser } = currentUserSlice.actions;
 export const currentUserReducer = currentUserSlice.reducer;

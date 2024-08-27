@@ -1,2 +1,2 @@
 export { createUser, fetchCurrentUser } from './model/CurrentUserThunk'
-export { currentUserReducer } from './model/CurrentUserSlice'
+export { currentUserReducer, cleanCurrentUser } from './model/CurrentUserSlice'

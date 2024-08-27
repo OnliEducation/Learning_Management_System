@@ -1,24 +1,35 @@
+
+input::placeholder {
+    transition: font-size 0.3s ease;
+}
+
+input:focus::placeholder {
+    font-size: 90%;
+}
+
 .default {
+    width: 100%;
     padding: 16px;
 
     color: black;
 
     border: 1px solid var(--dark-neutral-primary);
-    background-color: inherit;    
+    background-color: inherit;
 }
 
-.default::placeholder {    
+.default::placeholder {
     color: var(--light-neutral-tertiary);
 }
 
 .search {
+    width: 100%;
     padding: 14px;
     padding-left: 40px;
 
     color: var(--dark-neutral-primary);
 
     border: 1px solid var(--dark-neutral-primary);
-    background-color: inherit;  
+    background-color: inherit;
 }
 
 .search::placeholder {

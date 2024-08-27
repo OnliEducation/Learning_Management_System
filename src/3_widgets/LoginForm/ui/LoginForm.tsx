@@ -19,8 +19,8 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
 
     const dispatch = useAppDispatch();
 
-    function handleLogin() {
-        dispatch(signInUser({ email, password }));
+    async function handleLogin() {
+       await dispatch(signInUser({ email, password }));
         dispatch(fetchCurrentUser())
         setEmail('');
         setPassword('');
@@ -46,6 +46,7 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                                 placeholder="Email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                required
                             />
                             <FormField
                                 className={styles.formField}
@@ -54,8 +55,9 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                                 placeholder="Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                required
                             />
-                            <Button className={styles.button} onClick={() => handleLogin()} type="submit">
+                            <Button onClick={() => handleLogin()} type="submit">
                                 <span>Sign In</span>
                                 <Icon className={styles.icon} name="chevron" size={24} />
                             </Button>
@@ -65,7 +67,6 @@ export function LoginForm({ className }: ILoginForm): JSX.Element {
                 rightContent={
                     <span className={styles.imgContainer}>
                         <img className={styles.img} src="src/6_shared/ui/images/LoginGirl2.jpg" />
-                        {/* <img className={styles.img} src="src/6_shared/ui/images/SignUp.jpg" /> */}
                     </span>
                 }
             />

@@ -3,7 +3,7 @@ import {
     PayloadAction,
     createSlice
 } from "@reduxjs/toolkit";
-import { signInUser, signUpUser } from "./sessionThunk";
+import { signInUser, signOutUser, signUpUser } from "./sessionThunk";
 import { ISessionState } from "./types";
 
 const initialState: ISessionState = {
@@ -12,7 +12,7 @@ const initialState: ISessionState = {
     error: null,
     role: 'viewer',
 };
-
+2
 function isError(action: Action) {
     return action.type.endsWith('rejected');
 }
@@ -40,14 +40,14 @@ const sessionSlice = createSlice({
                 state.status = 'succeeded';
                 state.user = action.payload;
             })
-            // .addCase(signOutUser.pending, (state) => {
-            //     state.status = 'loading';
-            //     state.error = null;
-            // })
-            // .addCase(signOutUser.fulfilled, (state) => {
-            //     state.status = 'succeeded';
-            //     state.user = null;
-            // })
+            .addCase(signOutUser.pending, (state) => {
+                state.status = 'loading';
+                state.error = null;
+            })
+            .addCase(signOutUser.fulfilled, (state, action) => {
+                state.status = 'succeeded';
+                state.user = action.payload;
+            })
             .addMatcher(isError, (state, action: PayloadAction<string>) => {
                 state.status = 'failed';
                 state.error = action.payload;

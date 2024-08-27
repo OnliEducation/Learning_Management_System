@@ -23,7 +23,6 @@ interface ISessionSignUp {
 }
 
 export type {
-    ISession,
     ISessionState,
     ISessionLogin,
     ISessionSignUp
