@@ -22,6 +22,7 @@ export function CourseReviews(props: ICourseReviews): JSX.Element {
                             rating={item.rating}
                             content={item.content}
                             createdAt={item.createdAt}
+                            course={item.course}  // TODO: ненужное поле для ui Review. Нужен новый интерфейс?
                         />
                     </li>
                 ))}

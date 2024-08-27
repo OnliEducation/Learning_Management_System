@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ICourseCard } from "../../model/types"
 import styles from './CourseCardCompact.module.css'
 
-
 export function CourseCardCompact(props: ICourseCard): JSX.Element {
     const {
         id,

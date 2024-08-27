@@ -5,7 +5,6 @@ import { CardsLayout } from '../../../6_shared/ui/templates/CardsLayout';
 import { Icon } from '../../../6_shared/ui/atoms/Icon';
 import { LinkComponent } from '../../../6_shared/ui/atoms/LinkComponent';
 
-
 export function TopCategories(props: ITopCategories): JSX.Element {
   const { items, className } = props;
 

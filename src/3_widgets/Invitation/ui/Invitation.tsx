@@ -2,7 +2,6 @@ import { IInvitation } from '../model/types';
 import { LinkComponent } from '../../../6_shared/ui/atoms/LinkComponent';
 import { Icon } from '../../../6_shared/ui/atoms/Icon';
 import { ColumnLayout } from '../../../6_shared/ui/templates/ColumnLayout';
-
 import ManImage from "../../../6_shared/ui/images/InvitationMan.png"
 import WomanImage from "../../../6_shared/ui/images/InvitationWoman.png"
 
